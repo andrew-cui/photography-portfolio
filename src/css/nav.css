@@ -1,0 +1,70 @@
+.navbar {
+    position: fixed;
+    margin-top: 0;
+    padding-bottom: .5em;
+    min-height: 10vh;
+    background-color: #ffffffcc;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 4px 10px #00000050;
+    font-size: 1.1em;
+}
+
+.navbar-links {
+    justify-content: center;
+    margin: 0 0 1.5em 0;
+}
+
+.navbar-item a, .navbar-item p {
+    color: #27272a;
+    font-weight: 300;
+}
+
+
+.navbar a:hover {
+    color: #0ea5e9;
+    font-weight: 700;
+    transition: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.navbar-item {
+    margin-left: 1.5em;
+    padding-left: 0.5em;
+    padding-top: 1.5em;
+}
+
+.navbar-subitems {
+    position: absolute;
+    display: block;
+    bottom: 100%;
+    width: 100% + 3em;
+    left: -0.75em;
+    margin-bottom: 2.925em;
+    margin-right: 0.25em;
+    padding: 0.25em 2em 0.5em 1em;
+    text-align: left;
+    white-space: nowrap;
+    /* /* background-color: #ffffffdd; */
+    background: linear-gradient(to top, #ffffffcc 25%,  #ffffffdd 50%, #ffffffee 85%); 
+    backdrop-filter: blur(8px);
+    border-radius: 6px 6px 0 0;
+}
+
+.navicons {
+    display: flex;
+    margin: .75em 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.navicons a {
+    font-size: 12pt;
+    margin: 1em 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.navicons svg, .navicons path {
+    width: 1.5em;
+    height: 1.5em;
+}

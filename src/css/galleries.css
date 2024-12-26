@@ -1,0 +1,11 @@
+img.gallery-image {
+    /* max-width: 25%; */
+}
+
+img.img-vertical {
+    width: 25%;
+}
+
+img.img-horizontal {
+    max-height: 25em;
+}
