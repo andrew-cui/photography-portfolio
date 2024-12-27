@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom'
 import Home from './Home.jsx'
 import About from './About.jsx'
-import PhotosEurope from './Photos-Europe.jsx'
+import PhotosEurope from './PhotosEurope.jsx'
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/me" element={<About/>} />
-        <Route path="/travel-europe" element={<PhotosEurope/>} />
+        <Route path="/travel/europe" element={<PhotosEurope/>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

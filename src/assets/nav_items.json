@@ -1,0 +1,40 @@
+[
+    {
+      "album": "home",
+      "href": "/"
+    },
+    {
+      "album": "landscape & travel",
+      "href": "/travel",
+      "subItems": [
+        { "album": "banff", "href": "/travel/banff" },
+        { "album": "japan", "href": "/travel/japan" },
+        { "album": "nyc & usa", "href": "/travel/usa" },
+        { "album": "lake como", "href": "/travel/como" },
+        { "album": "alps", "href": "/travel/alps" },
+        { "album": "morocco", "href": "/travel/morocco" }
+      ]
+    },
+    {
+      "album": "portraits",
+      "href": "/portraits",
+      "subItems": [
+        { "album": "solo", "href": "/solo" },
+        { "album": "couples", "href": "/couples" },
+        { "album": "grads", "href": "/grads" }
+      ]
+    },
+    {
+      "album": "events & running",
+      "href": "/events",
+      "subItems": [
+        { "album": "running", "href": "/running" },
+        { "album": "parties", "href": "/parties" },
+        { "album": "events", "href": "/events" }
+      ]
+    },
+    {
+      "album": "about",
+      "href": "/me"
+    }
+  ]

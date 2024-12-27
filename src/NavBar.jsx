@@ -4,48 +4,9 @@ import {
 } from 'react-router-dom'
 import NavIcons from './NavIcons.jsx'
 import './css/nav.css'
+import sitePages from './assets/nav_items.json'
 
 // Fixed navigation bar pages
-const sitePages = [
-    {
-      album: "home",
-      href: "/"
-    },
-    {
-      album: "portraits",
-      href: "/portraits",
-      subItems: [
-        { album: "solo", href: "/solo" },
-        { album: "couples", href: "/couples" },
-        { album: "groups", href: "/groups" },
-        { album: "grads", href: "/grads" },
-      ],
-    },
-    {
-      album: "running & events",
-      href: "/running",
-      subItems: [
-        { album: "running", href: "/running" },
-        { album: "parties", href: "/parties" },
-        { album: "events", href: "/events" },
-      ],
-    },
-    {
-      album: "landscape & nature",
-      href: "/travel",
-      subItems: [
-        { album: "japan", href: "/travel-japan" },
-        { album: "europe", href: "/travel-europe" },
-        { album: "nyc", href: "/travel-nyc" },
-        { album: "usa", href: "/travel-usa" },
-      ]
-    },
-    {
-      album: "about",
-      href: "/me",
-    },
-  ];
-
 
 // Fixed navigation bar implementation - Not responsive for mobile
 const NavBar = () => {
@@ -87,8 +48,6 @@ const NavBar = () => {
             </div>
         ))}
         </div>
-        {/* <h2>Andrew Cui</h2> */}
-
         <NavIcons/>
     </div>
   )

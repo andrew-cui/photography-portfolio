@@ -1,0 +1,78 @@
+[
+    [
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/morainelake.jpg",
+            "destination": "/travel/banff",
+            "title": "banff, canada",
+            "caption": "sep 2022",
+            "category": "travel"
+        },
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/japan/japan1.jpg",
+            "destination": "/travel/japan",
+            "title": "japan",
+            "caption": "sep 2023",
+            "category": "travel"
+        },
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/usa/nyc-oculus-3wtc.jpg",
+            "destination": "/travel/usa",
+            "title": "nyc & usa",
+            "caption": "varies",
+            "category": "travel"
+        },
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/como/como-villabalbianello1.jpg",
+            "destination": "/travel/como",
+            "title": "lake como",
+            "caption": "june 2024",
+            "category": "travel"
+        }
+    ],
+    [
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/portraits/portraits-tw.jpg",
+            "destination": "/portraits",
+            "title": "portraits",
+            "caption": "varies",
+            "category": "portraits"
+        },
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/grads/grad-2019.jpg",
+            "destination": "/portraits/grads",
+            "title": "graduation pics",
+            "caption": "2019 - 2022",
+            "category": "portraits"
+        },
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/portraits/couples-z%2Bn.jpg",
+            "destination": "/portraits/couples",
+            "title": "couples",
+            "caption": "varies",
+            "category": "portraits"
+        }
+    ],
+    [
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/running/jerseycity1.jpg",
+            "destination": "/events/running",
+            "title": "road running",
+            "caption": "2024",
+            "category": "events"
+        },
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/events-padt1.jpg",
+            "destination": "/events/shows",
+            "title": "shows",
+            "caption": "2020",
+            "category": "events"
+        },
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/events-pwh1.jpg",
+            "destination": "/events/academia",
+            "title": "academia",
+            "caption": "2019-2020",
+            "category": "events"
+        }
+    ]
+]
