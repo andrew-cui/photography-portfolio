@@ -27,6 +27,13 @@
             "title": "lake como",
             "caption": "june 2024",
             "category": "travel"
+        },
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/marrakech/marrakech-koutoubia.jpg",
+            "destination": "/travel/morocco",
+            "title": "marrakech",
+            "caption": "june 2024",
+            "category": "travel"
         }
     ],
     [
