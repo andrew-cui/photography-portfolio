@@ -14,9 +14,11 @@ done:
 
 wishlist: 
 [] dynamic responsive site setup
-[] optimized image size & delivery
 [] collapsing navigation bar
+[] fix corners & margin gapping on responsive for horizontal images --> different classes
+[] responsive margins are too big
 [] sub-pages (how do we create them smartly to reduce effort?)
 [] blog / travel journal
 [] ada / accessibility support with alt captions
-[] fix corners & margin gapping on responsive for horizontal images --> different classes
+[] optimized image size & delivery
+[] preloading & lazy loading
