@@ -33,3 +33,13 @@
   font-size: 1em;
   font-style: italic;
 }
+
+@media (max-width: 768px) {
+  .site-text {
+    margin-left: 2em;
+  }
+
+  .header-text {
+    padding: 0.5em 1.5em 0.5em 0;
+  }
+}

@@ -111,3 +111,17 @@
   button.scroll-btn:focus, button.scroll-btn:focus-visible {
     outline: 2px gray;
   }
+
+  @media (max-width: 768px) {
+    .scroll-wrapper {
+        flex-wrap: wrap;
+        width: 20px;
+        gap: 10px;
+        right: 3em;
+        top: 10em;
+    }
+
+    .scroll-btn {
+        flex: 1 1 100%; /* Make each item take up the full width of the row */
+    }
+  }

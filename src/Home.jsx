@@ -3,8 +3,8 @@ import './css/galleries.css'
 import {
   Link
 } from 'react-router-dom'
-import NavBar from './NavBar.jsx'
-import Header from './Header.jsx'
+import NavBar from './components/NavBar.jsx'
+import Header from './components/Header.jsx'
 import imageData from './assets/home_images.json'
 
 
@@ -27,7 +27,7 @@ const Home = () => {
             {travelPhotos.map((image, index) => (
               <div key={index} className="image-container">
                 <Link to={image.destination}>
-                  <img src={image.src} className={`hover-image`}/>
+                  <img src={image.src} className={`hover-image`} loading="lazy"/>
                   <div className="hover-text">
                     <h3>{image.title}</h3>
                     <p>{image.caption}</p>
@@ -44,7 +44,7 @@ const Home = () => {
             {portraitPhotos.map((image, index) => (
               <div key={index} className="image-container">
                 <Link to={image.destination}>
-                  <img src={image.src} className={`hover-image`}/>
+                  <img src={image.src} className={`hover-image`} />
                   <div className="hover-text">
                     <h3>{image.title}</h3>
                     <p>{image.caption}</p>

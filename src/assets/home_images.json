@@ -1,59 +1,66 @@
 [
     [
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/morainelake.jpg",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/morainelake.avif",
             "destination": "/travel/banff",
             "title": "banff, canada",
             "caption": "sep 2022",
             "category": "travel"
         },
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/japan/japan1.jpg",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/japan/japan1.avif",
             "destination": "/travel/japan",
             "title": "japan",
             "caption": "sep 2023",
             "category": "travel"
         },
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/usa/nyc-oculus-3wtc.jpg",
-            "destination": "/travel/usa",
-            "title": "nyc & usa",
-            "caption": "varies",
-            "category": "travel"
-        },
-        {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/como/como-villabalbianello1.jpg",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/como/como-villabalbianello1.avif",
             "destination": "/travel/como",
             "title": "lake como",
             "caption": "june 2024",
             "category": "travel"
         },
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/marrakech/marrakech-koutoubia.jpg",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/marrakech/marrakech-koutoubia.avif",
             "destination": "/travel/morocco",
             "title": "marrakech",
             "caption": "june 2024",
+            "category": "travel"
+        },
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/usa/nyc-oculus-3wtc.avif",
+            "destination": "/travel/usa",
+            "title": "nyc & usa",
+            "caption": "varies",
+            "category": "travel"
+        },
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/london/london-stpauls.avif",
+            "destination": "/travel/london",
+            "title": "london",
+            "caption": "2019",
             "category": "travel"
         }
     ],
     [
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/portraits/portraits-tw.jpg",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/portraits/portraits-tw.avif",
             "destination": "/portraits",
             "title": "portraits",
             "caption": "varies",
             "category": "portraits"
         },
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/grads/grad-2019.jpg",
-            "destination": "/portraits/grads",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/grads/grad-2019.avif",
+            "destination": "/grads",
             "title": "graduation pics",
             "caption": "2019 - 2022",
             "category": "portraits"
         },
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/portraits/couples-z%2Bn.jpg",
-            "destination": "/portraits/couples",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/portraits/couples-z%2Bn2.avif",
+            "destination": "/couples",
             "title": "couples",
             "caption": "varies",
             "category": "portraits"
@@ -61,23 +68,30 @@
     ],
     [
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/running/jerseycity1.jpg",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/running/jerseycity1.avif",
             "destination": "/events/running",
             "title": "road running",
             "caption": "2024",
             "category": "events"
         },
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/events-padt1.jpg",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/upenn-padt/padt5.avif",
             "destination": "/events/shows",
             "title": "shows",
             "caption": "2020",
             "category": "events"
         },
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/events-pwh1.jpg",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/upenn-pwh/pwh1.avif",
             "destination": "/events/academia",
             "title": "academia",
+            "caption": "2019-2020",
+            "category": "events"
+        },
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/upenn-akdphi/akdphi1.avif",
+            "destination": "/events/other",
+            "title": "campus groups",
             "caption": "2019-2020",
             "category": "events"
         }

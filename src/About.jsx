@@ -1,5 +1,5 @@
 import './css/index.css'
-import NavBar from './NavBar.jsx'
+import NavBar from './components/NavBar.jsx'
 
 // About - destination URL /me
 const About = () => {
