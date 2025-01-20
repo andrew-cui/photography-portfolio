@@ -4,8 +4,6 @@ import NavBar from './components/NavBar.jsx'
 import Resume from './components/Resume.jsx'
 import ScrollKey from './components/Scroll.jsx'
 import { SM_Spacer, MD_Spacer, LG_Spacer } from './components/Spacers.jsx'
-// import ContactForm from './components/ContactForm.jsx'
-
 
 
 // About - destination URL /me
