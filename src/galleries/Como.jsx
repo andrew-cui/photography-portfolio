@@ -9,38 +9,39 @@ const image_json = [
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/como/como-villabalbianello2.avif', 
     orientation: 'img-vertical',
-    caption: 'villa balbianello',
+    location: 'villa balbianello',
     camera: 'sony a7iii / 35mm'
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/como/como-villabalbianello1.avif', 
     orientation: 'img-horizontal',
     caption: 'viewpoint from attack of the clones',
+    location: 'villa balbianello',
     camera: 'sony a7iii / 35mm'
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/como/como1.avif', 
     orientation: 'img-vertical',
     caption: 'villa monastero',
-    camera: ''
+    location: 'varenna, como',
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/como/como2.avif', 
     orientation: 'img-vertical',
     caption: 'gardens of villa melzi',
-    camera: ''
+    location: 'bellagio, como',
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/como/como3.avif', 
     orientation: 'img-vertical',
     caption: 'sailboats on the lake',
-    camera: ''
+    location: 'como, italy',
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/como/como-gelato.avif', 
     orientation: 'img-vertical',
     caption: 'the best gelato of the trip: lulivobysedar.com',
-    camera: ''
+    location: 'como, italy',
   },
 ]
 

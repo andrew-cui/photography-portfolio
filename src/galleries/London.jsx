@@ -32,7 +32,7 @@ const image_json = [
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/london/london-coventgarden.avif', 
-    orientation: 'img-vertical',
+    orientation: 'img-horizontal',
     caption: 'nighttime walks in convent garden',
     camera: 'sony a7iii / 20mm / composite'
   },

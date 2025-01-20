@@ -20,7 +20,7 @@
       "album": "portraits",
       "href": "/portraits",
       "subItems": [
-        { "album": "solo", "href": "/solo" },
+        { "album": "solo", "href": "/portraits" },
         { "album": "couples", "href": "/couples" },
         { "album": "grads", "href": "/grads" }
       ]

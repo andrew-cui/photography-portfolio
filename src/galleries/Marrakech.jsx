@@ -9,20 +9,19 @@ const image_json = [
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/marrakech/marrakech-koutoubia.avif', 
     orientation: 'img-vertical',
-    caption: 'villa balbianello',
-    camera: 'koutoubia mosque'
+    caption: 'koutoubia mosque',
+    camera: 'sony a7iii / 35mm',
+    location: 'marrakech, morocco',
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/marrakech/marrakech-jardinsecret.avif', 
     orientation: 'img-vertical',
     caption: 'dans le jardin secret',
-    camera: ''
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/marrakech/marrakech-souk2.avif', 
     orientation: 'img-vertical',
     caption: 'exploring the souks of the medina',
-    camera: ''
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/marrakech/marrakech-souk1.avif', 
@@ -35,19 +34,16 @@ const image_json = [
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/marrakech/marrakech-elbadi.avif', 
     orientation: 'img-vertical',
     caption: 'el badi palace',
-    camera: ''
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/marrakech/marrakech-bahia.avif', 
     orientation: 'img-horizontal',
     caption: 'bahia palace - luckily tourist free in this moment...',
-    camera: ''
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/marrakech/marrakech-ysl.avif', 
     orientation: 'img-vertical',
     caption: 'jardin majorelle of yves st laurent',
-    camera: ''
   },
 ]
 

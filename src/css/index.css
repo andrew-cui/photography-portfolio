@@ -67,3 +67,166 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+
+/* ABOUT PAGE */
+.breaker-image {
+  height: 240px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.breaker-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  opacity: 0.5;
+}
+
+.logos img {
+  height: 48px;
+  transition: all 0.25s ease-out;
+}
+
+.logos img:hover {
+  transform: scale(1.1);
+}
+
+.logos-running img {
+  border-radius: 50%;
+}
+
+.logos-future-races img {
+  opacity: 30%;
+  transition: all 0.25s ease-out;
+  filter: grayscale()
+}
+
+.logos-future-races img:hover {
+  opacity: 35%;
+  transform: none;
+}
+
+.resume {
+  width: 100%;
+  margin-bottom: 1.5em;
+  padding: 1em 0.5em;
+  background-color: #fafafacc;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 4px #d9d9d9; 
+  transition: all 0.25s ease-out;
+}
+
+.resume:hover {
+  /* transform: translateY(-3px); */
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px #cbd5e1; 
+}
+
+.resume img {
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.resume-button button {
+  position: relative;
+  left: 30%;
+  padding: 0.4em 2em;
+  margin-bottom: 2em;
+  font-weight: 300;
+  background-color: transparent;
+  color: #334155;
+  transition: all 0.25s ease-out;
+  font-size: .95em;
+}
+
+.resume-button:hover,
+.resume-button button,
+.resume-button button:hover, 
+.resume-button button:active, 
+.resume-button button:focus,
+.resume-button button:focus-visible {
+  outline: none;
+  border-color: none;
+  border: none;
+}
+
+.resume-internships {
+  height: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity 0.25s ease-out, transform 0.5s ease-out 0.4s;
+}
+
+.resume-internships.resume-show {
+  height: 100%;
+  opacity: 1;
+  transform: translateY(0); /* Reset position to normal */
+  pointer-events: auto;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out 0.1s;
+}
+
+.resume-details {
+  width: calc(100% - 64px);
+  text-align: left;
+}
+
+.resume-details a {
+  color: #334155;
+}
+
+.resume-details h2 {
+  font-size: 1.1em; 
+  font-weight: 600;
+  color: #334155;
+}
+
+.resume-details h3 {
+  font-size: 1em; 
+  font-style: italic;
+  font-weight: 300;
+  color: #475569;
+  margin-bottom: 0.25em;
+}
+
+.resume-details p {
+  font-size: 0.9em; 
+  font-weight: 300;
+  color: #475569;
+  margin-top: 0.75em;
+}
+
+.bucket-list {
+  /* list-style-type: '- '; */
+  margin-left: 1.5em;
+}
+
+.bucket-list li {
+  margin-left: .25em;
+
+  font-size: 0.9em; 
+  font-weight: 300;
+  color: #475569;
+}
+
+.checkbox {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 0.9em; 
+  height: 0.9em; 
+  border: 1px solid #475569;
+  border-radius: 2px;
+  margin-right: .5em;
+}
+
+.checked::after {
+  content: '✔';
+  position: absolute;
+  top: -5px;
+  color: #047857;
+}

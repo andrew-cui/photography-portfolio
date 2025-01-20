@@ -10,38 +10,39 @@ const image_json = [
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/morainelake.avif', 
     orientation: 'img-horizontal',
     caption: 'moraine lake at sunrise',
-    camera: 'sony a7iii / 17mm, 6 shot composite'
+    camera: 'sony a7iii / 17mm, 6 shot composite',
+    location: 'moraine lake'
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/larchvalley.avif', 
     orientation: 'img-vertical',
     caption: "arriving just in time for the larches to bloom",
-    camera: '70-180m'
+    camera: '70-180m',
+    location: 'larch valley trail'
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/minnewankawildlife.avif', 
     orientation: 'img-horizontal',
-    caption: 'wildlife at lake minnewanka',
-    camera: ''
+    caption: 'wildlife in the park!',
+    location: 'lake minnewanka'
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/morainelakecanoeclub.avif', 
     orientation: 'img-horizontal',
     caption: 'coming down from the larches to see everyone canoeing on the lake',
-    camera: ''
+    location: 'moraine lake'
   },
   
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/threesisters.avif', 
     orientation: 'img-horizontal',
-    caption: 'three sisters short hikein canmore',
-    camera: ''
+    caption: 'three sisters hike',
+    location: 'canmore'
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/canmore.avif', 
     orientation: 'img-vertical',
-    caption: 'canmore',
-    camera: ''
+    location: 'canmore',
   },
 
 ]

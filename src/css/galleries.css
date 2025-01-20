@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto 1em;
-    width: calc(100%-2em);
+    width: calc(100% - 2em);
     margin-bottom: 7.5em;
 }
 
@@ -73,7 +73,7 @@
 @media (max-width: 768px) {
     .image-gallery {
         margin: auto 2em;
-        width: calc(100%-4em);
+        width: calc(100% - 4em);
     }
 
     .flex-column {
@@ -104,7 +104,7 @@
 }
 
 .gallery-image-wrapper {
-    margin-bottom: 1.5em;
+    margin-bottom: 2.75em;
     margin-right: 2em; 
 }
 
@@ -131,7 +131,7 @@ img.gallery-image  {
     overflow-wrap: break-word;
 }
 
-.gallery-caption-meta {
+.gallery-caption-meta, .gallery-caption-location {
     font-size: 0.7em;
     font-family: 'Courier New';
 }
@@ -140,6 +140,11 @@ img.gallery-image  {
     content: '📸 ';
 }
 
+.gallery-caption-location:before {
+    content: '📍 ';
+}
+
+
 .gallery-title {
     font-size: 1.1em;
 }
@@ -147,7 +152,7 @@ img.gallery-image  {
 .gallery-subtitle {
     font-size: 0.9em;
     font-style: italic;
-    margin-bottom: .5em;
+    margin-bottom: 0;
 }
 
 
@@ -173,11 +178,11 @@ img.gallery-image  {
     }
 
     .gallery-image-wrapper {
-        margin-bottom: 1.5em;
+        margin-bottom: 2.25em;
     }
 
     .img-vertical {
-        height: 40vh;
+        height: 55vh;
     }
     
     .img-horizontal {
