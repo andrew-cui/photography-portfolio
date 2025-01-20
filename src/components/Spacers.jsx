@@ -16,4 +16,10 @@ const LG_Spacer = () => {
     )
 }
 
-export { SM_Spacer, MD_Spacer, LG_Spacer }
+const XL_Spacer = () => {
+    return (
+        <div className="my-3" style={{height: '7.5em'}}/>
+    )
+}
+
+export { SM_Spacer, MD_Spacer, LG_Spacer, XL_Spacer }

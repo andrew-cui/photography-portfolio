@@ -15,14 +15,14 @@
             "category": "travel"
         },
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/como/como-villabalbianello1.avif",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/como/como2.avif",
             "destination": "/travel/como",
             "title": "lake como",
             "caption": "june 2024",
             "category": "travel"
         },
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/marrakech/marrakech-koutoubia.avif",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/marrakech/marrakech-bahia.avif",
             "destination": "/travel/morocco",
             "title": "marrakech",
             "caption": "june 2024",
@@ -64,6 +64,13 @@
             "title": "couples",
             "caption": "varies",
             "category": "portraits"
+        },
+        {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/portraits/upenn-akdphi/akdphi1.avif",
+            "destination": "/groups",
+            "title": "groups",
+            "caption": "varies",
+            "category": "portraits"
         }
     ],
     [
@@ -89,7 +96,7 @@
             "category": "events"
         },
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/upenn-akdphi/akdphi1.avif",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/upenn-apahw/apahw1.avif",
             "destination": "/events/other",
             "title": "campus groups",
             "caption": "2019-2020",

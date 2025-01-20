@@ -1,17 +1,20 @@
 import '../css/index.css'
 import '../css/galleries.css'
 import ScrollKey from './Scroll.jsx'
+import { SM_Spacer, MD_Spacer, LG_Spacer, XL_Spacer } from './Spacers.jsx'
 
 
-const Gallery = ({title, subtitle, images}) => {
+const Gallery = ({title, subtitle, images, top_spacer = "medium", end_spacer = "xl"}) => {
   return (
     <div>
       {/* Primary gallery code */}
       <div className="gallery-container">
         <h4 className="gallery-title">{title}</h4>
         <h5 className="gallery-subtitle">{subtitle}</h5>
-      {/* <br></br> */}
       </div>
+      {top_spacer && (top_spacer == 'small') && <SM_Spacer/>}
+      {top_spacer && (top_spacer == 'medium') && <MD_Spacer/>}
+      {top_spacer && (top_spacer == 'large') && <LG_Spacer/>}
       <div className="flex flex-row gallery-container display-gallery gap-y-8">
           {images.map((image, index) => (
             <div key={index} className={`gallery-image-wrapper ${image.orientation}`} >
@@ -28,6 +31,10 @@ const Gallery = ({title, subtitle, images}) => {
             </div>
           ))}
       </div>
+      {end_spacer && <SM_Spacer/>}
+      {end_spacer && (end_spacer == 'medium') && <MD_Spacer/>}
+      {end_spacer && (end_spacer == 'large') && <LG_Spacer/>}
+      {end_spacer && (end_spacer == 'xl') && <XL_Spacer/>}
       <ScrollKey />
     </ div>
   )

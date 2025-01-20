@@ -29,8 +29,8 @@
     position: relative;
     overflow: hidden;
     min-width: 100%;
-    min-height: 280px;
-    max-height: 400px;
+    min-height: 240px;
+    max-height: 420px;
 }
 
 .hover-image {
@@ -100,7 +100,7 @@
     flex-wrap: wrap;
     justify-content: start;
     flex-shrink: 0;
-    margin: 1.5em 5em 10em 5em;
+    margin: 1.5em 5em;
 }
 
 .gallery-image-wrapper {
@@ -118,7 +118,7 @@
 
 img.gallery-image  {
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     height: 100%;
     width: auto;
     flex-shrink: 0;

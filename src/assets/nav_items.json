@@ -22,16 +22,18 @@
       "subItems": [
         { "album": "solo", "href": "/portraits" },
         { "album": "couples", "href": "/couples" },
-        { "album": "grads", "href": "/grads" }
+        { "album": "grads", "href": "/grads" },
+        { "album": "groups", "href": "/groups" }
       ]
     },
     {
       "album": "events & running",
       "href": "/events",
       "subItems": [
-        { "album": "running", "href": "/running" },
-        { "album": "parties", "href": "/parties" },
-        { "album": "events", "href": "/events" }
+        { "album": "running", "href": "/events/running" },
+        { "album": "shows", "href": "/events/shows" },
+        { "album": "academia", "href": "/events/academia" },
+        { "album": "campus groups", "href": "/events/other" }
       ]
     },
     {

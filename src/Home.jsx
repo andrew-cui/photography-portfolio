@@ -25,7 +25,7 @@ const Home = () => {
           <div className="flex-column image-gallery-col3">
             <h3 className="image-gallery-header">landscape & travel</h3>
             {travelPhotos.map((image, index) => (
-              <div key={index} className="image-container">
+              <div key={index} className="image-container" style={{height: '240px'}}>
                 <Link to={image.destination}>
                   <img src={image.src} className={`hover-image`} loading="lazy"/>
                   <div className="hover-text">
