@@ -10,6 +10,7 @@ import Marrakech from './galleries/travel/Marrakech.jsx'
 import Japan from './galleries/travel/Japan.jsx'
 import Banff from './galleries/travel/Banff.jsx'
 import Alps from './galleries/travel/Alps.jsx'
+import NL from './galleries/travel/Netherlands.jsx'
 import USA from './galleries/travel/USA.jsx'
 import London from './galleries/travel/London.jsx'
 import Graduation from './galleries/portraits/Graduation.jsx'
@@ -18,8 +19,8 @@ import Portraits from './galleries/portraits/Portraits.jsx'
 import Groups from './galleries/portraits/Groups.jsx'
 import Running from './galleries/events/Running.jsx'
 import Shows from './galleries/events/Shows.jsx'
+import Campus from './galleries/events/Campus.jsx'
 import Academia from './galleries/events/Academia.jsx'
-import Other from './galleries/events/Other.jsx'
 import ScrollToTopUponNewPage from './components/ScrollToTop.jsx'
 
 
@@ -41,6 +42,7 @@ const App = () => {
           <Route path="/travel/morocco" element={<Marrakech/>} />
           <Route path="/travel/como" element={<Como/>} />
           <Route path="/travel/alps" element={<Alps/>} />
+          <Route path="/travel/netherlands" element={<NL/>} />
 
           <Route path="/grads" element={<Graduation/>} />
           <Route path="/couples" element={<Couples/>} />
@@ -50,7 +52,7 @@ const App = () => {
           <Route path="/events/running" element={<Running/>} />
           <Route path="/events/shows" element={<Shows/>} />
           <Route path="/events/academia" element={<Academia/>} />
-          <Route path="/events/other" element={<Other/>} />
+          <Route path="/events/campus" element={<Campus/>} />
 
           <Route path="*" element={<Navigate to="/" replace />} />
 

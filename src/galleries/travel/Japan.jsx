@@ -15,13 +15,13 @@ const image_json = [
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/japan/japan7.avif', 
     orientation: 'img-vertical',
-    caption: 'dotonbori, osaka',
+    caption: 'dotonbori',
     location: 'osaka',
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/japan/japan5.avif', 
     orientation: 'img-vertical',
-    caption: "tasting tokyo's market street foods",
+    caption: "street foods",
     location: 'tokyo',
   },
   { 
@@ -34,7 +34,6 @@ const image_json = [
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/japan/japan9.avif', 
     orientation: 'img-vertical',
     caption: 'experiencing kimonos in ninenzaka',
-    location: 'kyoto',
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/japan/japan1.avif', 
@@ -70,7 +69,6 @@ const image_json = [
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/japan/japan15.avif', 
     orientation: 'img-vertical',
     caption: 'katsu',
-    location: 'tokyo',
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/japan/japan12.avif', 
@@ -82,20 +80,18 @@ const image_json = [
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/japan/japan13.avif', 
     orientation: 'img-vertical',
     caption: 'osaka castle (from the other side)',
-    location: 'osaka',
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/japan/japan17.avif', 
     orientation: 'img-vertical',
     caption: 'unagi & tamago',
-    location: 'tokyo',
   },
 
 ]
 
 
 const Japan = () => {
-  const data = {siteName: 'japan'}
+  const data = {siteName: 'japan 🇯🇵'}
   return (
     <div>
       <Header data={data}/>

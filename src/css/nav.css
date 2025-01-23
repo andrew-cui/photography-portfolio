@@ -1,9 +1,11 @@
-.navbar {
+
+  
+  .navbar {
     position: fixed;
     margin-top: 0;
     padding-bottom: .5em;
     bottom: 0;
-    height: 120px;
+    min-height: 120px;
     background-color: #ffffffcc;
     backdrop-filter: blur(8px);
     box-shadow: 0px 4px 10px #00000050;
@@ -113,6 +115,7 @@
     outline: 2px gray;
   }
 
+
   @media (max-width: 768px) {
     .scroll-wrapper {
         flex-wrap: wrap;
@@ -124,5 +127,49 @@
 
     .scroll-btn {
         flex: 1 1 100%; /* Make each item take up the full width of the row */
+    }
+    
+    .navbar {
+        min-height: 0px;
+        padding-bottom: 0;
+    }
+    .navbar.navbar-mobile-hidden {
+        background-color: none;
+        backdrop-filter: none;
+    }
+
+    .nav-menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        padding-top: 20px;
+        height: 50px;
+        padding-bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-menu svg {
+        height: 20px;
+    }
+
+
+    .nav-mobile.mobile-expanded {
+        position: fixed;
+        left: 0;
+        width: 100vw;
+        bottom: 0;
+        text-align: left;
+        background-color: #ffffffcc;
+        backdrop-filter: blur(8px);
+        box-shadow: 0px -4px 10px #00000050;
+        clip-path: inset(-10px 0 0 0); 
+        font-size: 0.9em;
+    }
+
+    .nav-mobile-item {
+        margin-left: 1.5em;
+        padding-left: 0.5em;
+        padding-top: 1.5em;
     }
   }

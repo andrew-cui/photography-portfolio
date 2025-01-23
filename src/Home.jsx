@@ -35,7 +35,7 @@ const Home = () => {
                 </Link>
               </div>
             ))}
-            <p>+ more in the links!</p>
+            {/* <p>+ more in the links!</p> */}
           </div>
 
           {/* Portraits */}

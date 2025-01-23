@@ -8,31 +8,34 @@ const image_json = [
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/london/london-stpauls.avif', 
     orientation: 'img-vertical',
-    caption: "light streaks with the double deckers @ st. paul's",
+    caption: "light streaks with the double deckers",
+    location: "st. paul's cathedral",
     camera: 'sony a7iii / 20mm / composite'
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/london/london-stpauls-cherryblossoms.avif', 
     orientation: 'img-horizontal',
     caption: 'cherry blossoms in the daytime',
+    location: "st. paul's cathedral",
     camera: 'sony a7iii / 50mm'
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/london/london-boroughmarket.avif', 
     orientation: 'img-vertical',
-    caption: 'borough market',
+    location: 'borough market',
     camera: ''
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/london/london-nealsyard.avif', 
     orientation: 'img-vertical',
-    caption: "neal's yard",
+    location: "neal's yard",
     camera: ''
   },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/london/london-coventgarden.avif', 
     orientation: 'img-horizontal',
-    caption: 'nighttime walks in convent garden',
+    caption: 'nighttime walks in soho',
+    location: 'covent garden',
     camera: 'sony a7iii / 20mm / composite'
   },
   { 
@@ -45,7 +48,7 @@ const image_json = [
 
 
 const London = () => {
-  const data = {siteName: 'london, uk'}
+  const data = {siteName: 'london, uk 🇬🇧'}
   return (
     <div>
       <Header data={data}/>

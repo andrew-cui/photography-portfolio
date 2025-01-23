@@ -14,7 +14,7 @@ const About = () => {
   }
   
   return (
-    <div>
+    <div className="aboutme">
         <div className="breaker-image"><img style={{objectPosition: 'center 40%'}} src="https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/morainelake.avif"/></div>
 
         <div style={{marginTop: '2.5em'}}></div>
@@ -23,7 +23,6 @@ const About = () => {
           <h2 style={{fontSize: '2.5em'}}>andrew cui</h2>
           <p  style={{fontSize: '1em'}}>photographer &nbsp; | &nbsp; nyc</p>
         </div>
-
         
         <div className="text-center my-4 py-6 w-full">
           {/* introduction */}
@@ -90,7 +89,7 @@ const About = () => {
             </div>
           </div>
 
-          <LG_Spacer/>
+          <XL_Spacer/>
           <div className="breaker-image"><img style={{objectPosition: 'center 50%'}} src="https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/alps/neuschwanstein.avif"/></div>
           <LG_Spacer/>
 
@@ -98,7 +97,7 @@ const About = () => {
           <div className="flex flex-col md:flex-row mx-auto w-[80%] sm:w-[60%] md:w-[80%] lg:w-[65%]">
             <div className="w-full md:w-1/4 lg:w-1/3 px-2 sm:px-3 md:px-5"></div>
             <div className="w-full md:w-3/4 lg:w-2/3 px-3 sm:px-5 md:px-8">
-              <h2 style={{fontSize: '1.4em'}} className="mb-6">work</h2>
+              <h2 style={{fontSize: '1.4em'}} className="mb-6">work & education</h2>
               <Resume 
                 company={"Attentive"} 
                 company_url={"https://www.attentive.com"}
@@ -127,17 +126,21 @@ const About = () => {
               </Resume>
 
               <Resume 
-                company={"UPenn"} 
-                // company_url={"https://www.cis.upenn.edu/"}
-                role={"TA"}
-                description={<>
-                  1st head TA for <u><a href="https://sites.google.com/seas.upenn.edu/cis545/home" target="_blank"><i>cis 545 (big data)</i></a></u>, total 3 semesters
+                  company={"University of Pennsylvania"} 
+                  role={"B.S. in Computer Science / B.S. in Economics (Statistics)"}
+                  description={<><a href="https://fisher.wharton.upenn.edu/" target="_blank">management & technology program</a>
                   <br />
-                  TA for <i>cis 240 (computer systems), mcit 594, stat 405 (r), stat 422/722</i>
-                </>}
-                date={"2018 - 2020"}
-                logo={"https://branding.web-resources.upenn.edu/sites/default/files/styles/card_3x2/public/2022-03/UniversityofPennsylvania_FullLogo_RGB-4_0.png?h=ab080a2f&itok=tu_jMFEm"}>
-              </Resume>
+                  research: 
+                  <ul className="list">
+                    <li>customer loyalty programs (marketing thesis)</li>
+                    <li>sports analytics & predicting baseball (statistics / cs thesis)</li>
+                    <li>part-time research assistant to <a href="https://www.stern.nyu.edu/faculty/bio/julianna-pillemer" target="_blank">julianna pillemer (org behavior)</a> and <a href="https://fisher.osu.edu/people/contigiani.1" target="_blank">andrea contigiani (management & entrepreneurship)</a> at the wharton school</li>
+                  </ul>
+                  </>}
+                  date={"c/o 2020"}
+                  logo={"https://branding.web-resources.upenn.edu/sites/default/files/styles/card_3x2/public/2022-03/UniversityofPennsylvania_FullLogo_RGB-4_0.png?h=ab080a2f&itok=tu_jMFEm"}>
+                </Resume>
+
 
               <div className="resume-button"><button onClick={toggleInternships}><i>
                 {isVisible ? 
@@ -148,11 +151,24 @@ const About = () => {
                         <path d="M4 8 L12 16 L20 8" fill="none" stroke="#27272a" strokeWidth={1}/>
                     </svg> 
                   }&nbsp;&nbsp;
-                {isVisible ? 'hide' : 'show'} internships
+                {isVisible ? 'hide' : 'show'} college
                 </i></button></div>
 
 
               <div className={`resume-internships ${isVisible ? 'resume-show' : ''}`}>
+                <Resume 
+                  company={"UPenn"} 
+                  // company_url={"https://www.cis.upenn.edu/"}
+                  role={"Student TA"}
+                  description={<>
+                    1st head TA for <u><a href="https://sites.google.com/seas.upenn.edu/cis545/home" target="_blank"><i>cis 545 (big data)</i></a></u>, total 3 semesters
+                    <br />
+                    TA for <i>cis 240 (computer systems), mcit 594, stat 405 (r), stat 422/722</i>
+                  </>}
+                  date={"2018 - 2020"}
+                  logo={"https://branding.web-resources.upenn.edu/sites/default/files/styles/card_3x2/public/2022-03/UniversityofPennsylvania_FullLogo_RGB-4_0.png?h=ab080a2f&itok=tu_jMFEm"}>
+                </Resume>
+
                 <Resume 
                   company={"JW Player"} 
                   company_url={"https://jwplayer.com/"}
@@ -205,15 +221,17 @@ const About = () => {
               </div>
               <MD_Spacer/>
               <p className="text-left">
-                 for fun: select items on my "bucket list":
+                 for fun: some goals & current "bucket list" items:
                  <ul className="bucket-list">
                   <li><div className="checkbox checked"/>run a marathon (done this plenty of times now...)</li>
                   <li><div className="checkbox"/>run 2,025 miles for 2025</li>
                   <li><div className="checkbox"/>qualify for the boston marathon</li>
                   <li><div className="checkbox"/>finish a triathlon (and then a 70.3)</li>
-                  <br></br>
+                  {/* <br></br> */}
                   <li><div className="checkbox"/>learn 20 new recipes this year</li>
                   <li><div className="checkbox"/>learn another language</li>
+                  <li><div className="checkbox"/>watch the world series live</li>
+                  <li><div className="checkbox"/>film a food video or vlog</li>
                   <li><div className="checkbox"/>finish every day in a week of the nyt crossword</li>
                   <li><div className="checkbox"/>complete a 1,000 piece puzzle in 6-8 hours alone</li>
                  </ul>

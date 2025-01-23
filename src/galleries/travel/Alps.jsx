@@ -57,7 +57,7 @@ const image_json = [
 
 
 const Alps = () => {
-  const data = {siteName: 'alps'}
+  const data = {siteName: 'alps 🏔️'}
   return (
     <div>
       <Header data={data}/>

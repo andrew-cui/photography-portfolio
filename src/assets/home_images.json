@@ -15,6 +15,13 @@
             "category": "travel"
         },
         {
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/amsterdam/amsterdam8.avif",
+            "destination": "/travel/netherlands",
+            "title": "netherlands",
+            "caption": "june 2024",
+            "category": "travel"
+        },
+        {
             "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/como/como2.avif",
             "destination": "/travel/como",
             "title": "lake como",
@@ -97,9 +104,9 @@
         },
         {
             "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/upenn-apahw/apahw1.avif",
-            "destination": "/events/other",
-            "title": "campus groups",
-            "caption": "2019-2020",
+            "destination": "/events/campus",
+            "title": "student groups",
+            "caption": "2019",
             "category": "events"
         }
     ]

@@ -7,13 +7,14 @@
       "album": "landscape & travel",
       "href": "/travel",
       "subItems": [
-        { "album": "banff", "href": "/travel/banff" },
-        { "album": "japan", "href": "/travel/japan" },
-        { "album": "nyc & usa", "href": "/travel/usa" },
-        { "album": "lake como", "href": "/travel/como" },
-        { "album": "alps", "href": "/travel/alps" },
-        { "album": "london", "href": "/travel/london" },
-        { "album": "morocco", "href": "/travel/morocco" }
+        { "album": "banff 🇨🇦", "href": "/travel/banff" },
+        { "album": "japan 🇯🇵", "href": "/travel/japan" },
+        { "album": "nyc & usa 🇺🇸", "href": "/travel/usa" },
+        { "album": "netherlands 🇳🇱", "href": "/travel/netherlands" },
+        { "album": "lake como 🇮🇹", "href": "/travel/como" },
+        { "album": "alps 🏔️", "href": "/travel/alps" },
+        { "album": "london 🇬🇧 ", "href": "/travel/london" },
+        { "album": "morocco 🇲🇦", "href": "/travel/morocco" }
       ]
     },
     {
@@ -31,9 +32,9 @@
       "href": "/events",
       "subItems": [
         { "album": "running", "href": "/events/running" },
-        { "album": "shows", "href": "/events/shows" },
+        { "album": "shows & events", "href": "/events/shows" },
         { "album": "academia", "href": "/events/academia" },
-        { "album": "campus groups", "href": "/events/other" }
+        { "album": "campus events", "href": "/events/campus" }
       ]
     },
     {

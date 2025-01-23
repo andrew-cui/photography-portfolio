@@ -157,6 +157,10 @@ img.gallery-image  {
 
 
 @media (max-width: 768px) {
+    .image-gallery {
+        margin-bottom: 7.5em;
+    }
+    
     .gallery-container {
         margin: auto 2.5em;
     }

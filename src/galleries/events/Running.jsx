@@ -3,7 +3,7 @@ import NavBar from '../../components/NavBar.jsx'
 import Header from '../../components/Header.jsx'
 import Gallery from '../../components/Gallery.jsx'
 import ScrollKey from '../../components/Scroll.jsx'
-import { SM_Spacer, MD_Spacer } from '../../components/Spacers.jsx'
+import { MD_Spacer } from '../../components/Spacers.jsx'
 
 const image_jchalf = [
   { 

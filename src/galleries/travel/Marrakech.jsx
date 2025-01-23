@@ -48,7 +48,7 @@ const image_json = [
 
 
 const Marrakech = () => {
-  const data = {siteName: 'marrakech, morocco'}
+  const data = {siteName: 'marrakech, morocco 🇲🇦'}
   return (
     <div>
       <Header data={data}/>
