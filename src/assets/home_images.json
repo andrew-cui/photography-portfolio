@@ -97,16 +97,16 @@
         },
         {
             "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/upenn-pwh/pwh1.avif",
-            "destination": "/events/academia",
-            "title": "academia",
-            "caption": "2019-2020",
+            "destination": "/events/parties",
+            "title": "parties",
+            "caption": "2023-",
             "category": "events"
         },
         {
-            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/upenn-apahw/apahw1.avif",
-            "destination": "/events/campus",
-            "title": "student groups",
-            "caption": "2019",
+            "src": "https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/events/upenn-pwh/pwh1.avif",
+            "destination": "/events/academia",
+            "title": "academia",
+            "caption": "2019-2020",
             "category": "events"
         }
     ]

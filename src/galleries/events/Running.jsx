@@ -54,7 +54,7 @@ const Running = () => {
       <div className="gallery-container text-right"><p style={{fontSize: '0.9em', marginRight: '5em'}}>
         all photos listed below are my own independent work, and are separate from my work for marathonfoto
         <br></br>
-        <span style={{fontWeight: 600}}>images are free for personal use</span>: please credit me (<a href="https://www.instagram.com/andrew.cui/" target="_blank">ig: @andrew.cui</a>); <a href="https://buymeacoffee.com/andrew.cui" target="_blank">donations</a> are appreciated but in no way expected!
+        <span style={{fontWeight: 600}}>images are free for personal use</span>: please credit (<a href="https://www.instagram.com/andrew.cui/" target="_blank">ig: @andrew.cui</a>); <a href="https://buymeacoffee.com/andrew.cui" target="_blank">donations</a> are appreciated but in no way expected!
       </p></div>
       <MD_Spacer/>
 

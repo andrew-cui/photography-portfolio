@@ -65,11 +65,10 @@ const About = () => {
                 <div className="flex flex-row flex-wrap w-[100%] md:w-[90%] lg:w-[80%] pt-3 gap-x-6 gap-y-6">
                   <div className="logos"><img src="https://images.squarespace-cdn.com/content/v1/616756a52f1c22567678b71e/083846c6-a18b-47fd-9956-7d2118362087/run-for-chinatown-logo-square.jpg"/></div>
                   <div className="logos"><img src="https://branding.web-resources.upenn.edu/sites/default/files/styles/card_3x2/public/2022-03/UniversityofPennsylvania_FullLogo_RGB-4_0.png?h=ab080a2f&itok=tu_jMFEm"/></div>
-                  <div className="logos"><img src="https://global.upenn.edu/sites/default/files/2018-02/logo--perry-world-house.svg"/></div>
+                  <div className="logos"><img src="https://fundit.fr/sites/default/files/styles/max_650x650/public/institutions/capture-decran-2023-04-20-162416.png?itok=qlrLBVQ9"/></div>
                   <div className="logos"><img src="https://images.squarespace-cdn.com/content/v1/591f52c820099e7018b23028/1497392629241-6ZWKFOMSX7420ONZCGP0/PADT+Logo+2.png"/></div>
                   <div className="logos"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzK8pGbWe2fG_vI3TSp2jtmvydUzyhHHISag&s"/></div>
                   <div className="logos"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHr0AnN8DOVmUjUKEkT8-7jfOm4jFo7lKMnw&s"/></div>
-                  <div className="logos"><img src="https://scontent-lga3-3.xx.fbcdn.net/v/t1.6435-9/74347375_2502056399850147_7515136279059628032_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=Y5v_9_kHWlQQ7kNvgGDHCg8&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=Ar5131KMLOo-3OtOGZMPaFE&oh=00_AYBGmUqXDL7V6PWt047tXgR--ZpqY0TW2Jqg_I3aDrIe7Q&oe=67B53BF0"/></div>
                 </div>
                 <MD_Spacer/>
                 <p className="text-left">
@@ -214,7 +213,7 @@ const About = () => {
               <div className="flex flex-row flex-wrap w-full pt-3 gap-x-6 gap-y-4">
                 {/* <div className="logos logos-running"><img src="https://prodsitecore.blob.core.windows.net/nyrrsitecoreblob/nyrr/logo/uanych18_4p_primary_logo_nodate_rgb_full_color300x300.png"/></div> */}
                 <div className="logos logos-running"><img src="https://www.rrca.org/wp-content/uploads/347782572_579814150920421_4556378350945100525_n.jpg"/></div>
-                <div className="logos logos-running"><img src="https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-1/327466807_867634351114572_5585112482290563793_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=ont_RRxMGVAQ7kNvgEQrTG3&_nc_zt=24&_nc_ht=scontent-lga3-2.xx&_nc_gid=AflLmwt6skvdpUxCV_dLcT5&oh=00_AYDbUHWdBGIKS_vbFhPR5DwKPuHcBWJzFjCG3DzYhYFWnw&oe=6793B0A7"/></div>
+                <div className="logos logos-running"><img src="https://media.racecheck.com/EventInstance/810d4c58-1e21-4f22-86b2-7dd687abe039.png"/></div>
                 <div className="logos logos-running"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfpN04uzQFaW8uZ2IIBvzriEX_uSbvHZ_eqA&s"/></div>
                 <div className="logos logos-running logos-future-races"><img src="https://raceraves.com/wp-content/uploads/2019/10/Vienna-City-Marathon-logo.jpg"/></div>
                 <div className="logos logos-running logos-future-races"><img style={{'border-radius': '8px'}} src="https://cdn.raceroster.com/event-logo/3tzmu2kzpqspzw22._original.jpg"/></div>

@@ -2,6 +2,7 @@
 import {
   BrowserRouter, Routes, Route, Navigate, useLocation
 } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion';
 
 import Home from './Home.jsx'
 import About from './About.jsx'
@@ -21,44 +22,69 @@ import Running from './galleries/events/Running.jsx'
 import Shows from './galleries/events/Shows.jsx'
 import Campus from './galleries/events/Campus.jsx'
 import Academia from './galleries/events/Academia.jsx'
+import Parties from './galleries/events/Parties.jsx'
 import ScrollToTopUponNewPage from './components/ScrollToTop.jsx'
+
+const PageTransition = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.25 }}
+  >
+    {children}
+  </motion.div>
+);
 
 
 const App = () => {
+  const location = useLocation();
+
   return (
-    <BrowserRouter  basename="/" future={{
-      v7_relativeSplatPath: true,
-      v7_startTransition: true,
-    }}> 
+    <div>
+      <AnimatePresence mode="wait">
       <ScrollToTopUponNewPage /> 
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/me" element={<About/>} />
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<PageTransition><Home/></PageTransition>} />
+          <Route path="/me" element={<PageTransition><About/></PageTransition>} />
 
-          <Route path="/travel/usa" element={<USA/>} />
-          <Route path="/travel/london" element={<London/>} />
-          <Route path="/travel/banff" element={<Banff/>} />
-          <Route path="/travel/japan" element={<Japan/>} />
-          <Route path="/travel/morocco" element={<Marrakech/>} />
-          <Route path="/travel/como" element={<Como/>} />
-          <Route path="/travel/alps" element={<Alps/>} />
-          <Route path="/travel/netherlands" element={<NL/>} />
+          <Route path="/travel/usa" element={<PageTransition><USA/></PageTransition>} />
+          <Route path="/travel/london" element={<PageTransition><London/></PageTransition>} />
+          <Route path="/travel/banff" element={<PageTransition><Banff/></PageTransition>} />
+          <Route path="/travel/japan" element={<PageTransition><Japan/></PageTransition>} />
+          <Route path="/travel/morocco" element={<PageTransition><Marrakech/></PageTransition>} />
+          <Route path="/travel/como" element={<PageTransition><Como/></PageTransition>} />
+          <Route path="/travel/alps" element={<PageTransition><Alps/></PageTransition>} />
+          <Route path="/travel/netherlands" element={<PageTransition><NL/></PageTransition>} />
 
-          <Route path="/grads" element={<Graduation/>} />
-          <Route path="/couples" element={<Couples/>} />
-          <Route path="/portraits" element={<Portraits/>} />
-          <Route path="/groups" element={<Groups/>} />
+          <Route path="/grads" element={<PageTransition><Graduation/></PageTransition>} />
+          <Route path="/couples" element={<PageTransition><Couples/></PageTransition>} />
+          <Route path="/portraits" element={<PageTransition><Portraits/></PageTransition>} />
+          <Route path="/groups" element={<PageTransition><Groups/></PageTransition>} />
 
-          <Route path="/events/running" element={<Running/>} />
-          <Route path="/events/shows" element={<Shows/>} />
-          <Route path="/events/academia" element={<Academia/>} />
-          <Route path="/events/campus" element={<Campus/>} />
+          <Route path="/events/running" element={<PageTransition><Running/></PageTransition>} />
+          <Route path="/events/shows" element={<PageTransition><Shows/></PageTransition>} />
+          <Route path="/events/academia" element={<PageTransition><Academia/></PageTransition>} />
+          <Route path="/events/campus" element={<PageTransition><Campus/></PageTransition>} />
+          <Route path="/events/parties" element={<PageTransition><Parties/></PageTransition>} />
 
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<PageTransition><Navigate to="/" replace /></PageTransition>} />
 
         </Routes>
-      </BrowserRouter>
+      
+      </AnimatePresence>
+    </div>
   )
 }
 
-export default App
+
+const Root = () => (
+  <BrowserRouter  basename="/" future={{
+    v7_relativeSplatPath: true,
+    v7_startTransition: true,
+  }}>
+    <App />
+  </BrowserRouter>
+);
+
+export default Root

@@ -32,9 +32,9 @@
       "href": "/events",
       "subItems": [
         { "album": "running", "href": "/events/running" },
-        { "album": "shows & events", "href": "/events/shows" },
-        { "album": "academia", "href": "/events/academia" },
-        { "album": "campus events", "href": "/events/campus" }
+        { "album": "shows", "href": "/events/shows" },
+        { "album": "parties", "href": "/events/parties" },
+        { "album": "academia", "href": "/events/academia" }
       ]
     },
     {
