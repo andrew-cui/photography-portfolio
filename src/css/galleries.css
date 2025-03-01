@@ -199,3 +199,13 @@ img.gallery-image  {
         border-radius: 12px / 16px;
     }
   }
+
+  @media (max-width: 576px) {
+    .image-gallery {
+        margin-bottom: 5em;
+    }
+
+    .display-gallery {
+        margin: 1.5em 2em 5em 2em;
+    }
+  }

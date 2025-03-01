@@ -59,7 +59,7 @@ const image_json = [
 
 
 const NL = () => {
-  const data = {siteName: 'the netherlands 🇳🇱'}
+  const data = {siteName: 'netherlands 🇳🇱'}
   return (
     <div>
       <Header data={data}/>

@@ -4,7 +4,7 @@ import ScrollKey from './Scroll.jsx'
 import { SM_Spacer, MD_Spacer, LG_Spacer, XL_Spacer } from './Spacers.jsx'
 
 
-const Gallery = ({title, subtitle, images, top_spacer = "medium", end_spacer = "xl"}) => {
+const Gallery = ({title, subtitle, images, top_spacer = "medium", end_spacer = "medium"}) => {
   return (
     <div>
       {/* Primary gallery code */}

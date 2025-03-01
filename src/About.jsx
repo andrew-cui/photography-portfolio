@@ -35,7 +35,7 @@ const About = () => {
               <h2 style={{fontSize: '1.4em'}} className="mb-4">hi!</h2>
               <p className="text-left">
                 i'm a photographer based in nyc, originally from upstate new york.
-                welcome to my new portfolio - i built it to showcase client shoots, share favorites from my travels (like the banners here!), and to reteach myself how to code &nbsp; <i>(thank you gpt & claude).</i>
+                welcome to my new portfolio - i built it to showcase client shoots, share favorites from my travels (like the banners here!), and to reteach myself how to code &nbsp; <i>(thank you anthropic & gpt).</i>
               </p>
               <SM_Spacer/>
               <p className="text-left">
@@ -204,11 +204,11 @@ const About = () => {
             <div className="w-full md:w-4/5 lg:w-3/5 px-3 sm:px-5 md:px-8 mt-7 mx-auto">
               <h2 style={{fontSize: '1.4em'}} className="mb-4">everything else!</h2>
               <p className="text-left">
-                 outside of photography & work, i run marathons for fun, support the <a href="https://www.lls.org/" target="_blank">leukemia & lymphoma society</a> (~$5k fundraised in 2023), travel, ski, and blindly cheer for the new york yankees.
+                 outside of photography & work, i run marathons for fun, support the <a href="https://www.lls.org/" target="_blank">leukemia & lymphoma society</a> (~$5k fundraised in 2023), travel, ski, and blindly cheer for the new york yankees.<SM_Spacer/>in re-teaching myself how to code, i'm also building a new author website for <a href="https://www.tiffanyjwang.com/" target="_blank">tiffany wang!</a>
               </p>
-              <SM_Spacer/>
+              <MD_Spacer/>
               <p className="text-left">
-                 my digital race medal shelf:
+                 marathon calendar:
               </p>
               <div className="flex flex-row flex-wrap w-full pt-3 gap-x-6 gap-y-4">
                 {/* <div className="logos logos-running"><img src="https://prodsitecore.blob.core.windows.net/nyrrsitecoreblob/nyrr/logo/uanych18_4p_primary_logo_nodate_rgb_full_color300x300.png"/></div> */}
@@ -222,7 +222,9 @@ const About = () => {
               <p className="text-left">
                  for fun: some goals & current "bucket list" items:
                  <ul className="bucket-list">
-                  <li><div className="checkbox checked"/>run a marathon (done this plenty of times now...)</li>
+                  <li><div className="checkbox checked"/>run a marathon (4x+ now...)</li>
+                  <li><div className="checkbox checked"/>finish the nyt crossword</li>
+                  <li><div className="checkbox checked"/>relearn basic web dev</li>
                   <li><div className="checkbox"/>run 2,025 miles for 2025</li>
                   <li><div className="checkbox"/>qualify for the boston marathon</li>
                   <li><div className="checkbox"/>finish a triathlon (and then a 70.3)</li>
@@ -231,7 +233,6 @@ const About = () => {
                   <li><div className="checkbox"/>learn another language</li>
                   <li><div className="checkbox"/>watch the world series live</li>
                   <li><div className="checkbox"/>film a food video or vlog</li>
-                  <li><div className="checkbox"/>finish every day in a week of the nyt crossword</li>
                   <li><div className="checkbox"/>complete a 1,000 piece puzzle in 6-8 hours alone</li>
                  </ul>
               </p>

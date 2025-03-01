@@ -11,14 +11,15 @@ done:
 - [x] scrolling
 - [x] como, marrakech & japan!
 - [x] first test deploy (fingerscrossed) 
+- [x] responsive margins are too big
+- [x] sub-pages (how do we create them smartly to reduce effort?)
+- [x] optimized image size & delivery
+- [x] collapsing navigation bar
+- [x] improved responsiveness design
+- [x] fix light vs. dark mode issue
 
 wishlist: 
-[] dynamic responsive site setup
-[] collapsing navigation bar
-[] fix corners & margin gapping on responsive for horizontal images --> different classes
-[] responsive margins are too big
-[] sub-pages (how do we create them smartly to reduce effort?)
+[?] dynamic responsive site setup & image sizing
 [] blog / travel journal
 [] ada / accessibility support with alt captions
-[] optimized image size & delivery
 [] preloading & lazy loading

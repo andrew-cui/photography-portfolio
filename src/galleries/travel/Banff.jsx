@@ -48,7 +48,7 @@ const image_json = [
 
 
 const Banff = () => {
-  const data = {siteName: 'banff national park, canada 🇨🇦'}
+  const data = {siteName: "banff nat'l park, canada 🇨🇦"}
   return (
     <div>
       <Header data={data}/>

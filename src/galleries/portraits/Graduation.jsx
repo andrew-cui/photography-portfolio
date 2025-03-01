@@ -111,7 +111,7 @@ const image_json_groups = [
   ]
 
 const Graduation = () => {
-  const data = {siteName: 'grad photos'}
+  const data = {siteName: 'grad photos 🎓'}
 
   return (
     <div>

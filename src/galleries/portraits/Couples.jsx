@@ -52,7 +52,7 @@ const image_may_matt = [
   ]
 
 const Couples = () => {
-  const data = {siteName: 'love'}
+  const data = {siteName: 'love ❤️'}
 
   return (
     <div>

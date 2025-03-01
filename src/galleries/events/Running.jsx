@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import '../../css/index.css'
 import NavBar from '../../components/NavBar.jsx'
 import Header from '../../components/Header.jsx'
@@ -46,15 +47,34 @@ const image_rfc = [
 
 const Running = () => {
   const data = {siteName: 'running'}
+  const [isVisible, setIsToggled] = useState(false);
+  const toggleDisclaimer = () => {
+    setIsToggled(!isVisible);
+  }
 
   return (
     <div>
       <Header data={data}/>
 
-      <div className="gallery-container text-right"><p style={{fontSize: '0.9em', marginRight: '5em'}}>
-        all photos listed below are my own independent work, and are separate from my work for marathonfoto
-        <br></br>
-        <span style={{fontWeight: 600}}>images are free for personal use</span>: please credit (<a href="https://www.instagram.com/andrew.cui/" target="_blank">ig: @andrew.cui</a>); <a href="https://buymeacoffee.com/andrew.cui" target="_blank">donations</a> are appreciated but in no way expected!
+      <div className="resume-button disclaimer-button"><button onClick={toggleDisclaimer}><i>
+        {isVisible ? 
+            <svg className="inline-block" width="12" height="12" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 16 L12 8 L20 16" fill="none" stroke="#27272a" strokeWidth={1}/>
+            </svg> :
+            <svg className="inline-block" width="12" height="12" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
+                <path d="M4 8 L12 16 L20 8" fill="none" stroke="#27272a" strokeWidth={1}/>
+            </svg> 
+          }&nbsp;&nbsp;
+        {isVisible ? 'hide' : 'show'} disclaimer
+      </i></button></div>
+
+      <div className={`gallery-container text-left disclaimer ${isVisible ? 'disclaimer-show' : ''}`}><p style={
+        {fontSize: '0.85em', fontWeight: '300', lineHeight: '1.5em', 'marginTop': 0, color: 'gray'}}>
+        <ul className="list">
+          <li>photos below are independent work only</li>
+          <li><span style={{fontWeight: 500}}>images are free for personal use</span> - please credit (<a href="https://www.instagram.com/andrew.cui/" target="_blank">ig: @andrew.cui</a>)</li>
+          <li><a href="https://buymeacoffee.com/andrew.cui" target="_blank">donations</a> are appreciated but in no way expected!</li>
+        </ul>
       </p></div>
       <MD_Spacer/>
 
