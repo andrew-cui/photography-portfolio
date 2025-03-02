@@ -13,6 +13,27 @@ const image_json = [
     location: 'moraine lake'
   },
   { 
+    src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/banff-2025-assiniboine.avif', 
+    orientation: 'img-vertical',
+    caption: "mt. assiniboine",
+    camera: '70-180m',
+    location: 'banff sunrise resort'
+  },
+  { 
+    src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/banff-2025-northernlights-1.avif', 
+    orientation: 'img-horizontal',
+    caption: 'northern lights',
+    camera: 'sony a7iii / 17mm',
+    location: 'vermillion lakes'
+  },
+  { 
+    src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/banff-2025-northernlights-2.avif', 
+    orientation: 'img-horizontal',
+    caption: 'light painting',
+    camera: 'sony a7iii / 17mm',
+    location: 'vermillion lakes'
+  },  
+  { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/larchvalley.avif', 
     orientation: 'img-vertical',
     caption: "arriving just in time for the larches to bloom",
@@ -31,7 +52,12 @@ const image_json = [
     caption: 'coming down from the larches to see everyone canoeing on the lake',
     location: 'moraine lake'
   },
-  
+  { 
+    src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/banff-2025-sunshine.avif', 
+    orientation: 'img-horizontal',
+    caption: 'skiing @ banff sunshine',
+    location: 'banff sunshine resort'
+  },
   { 
     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/threesisters.avif', 
     orientation: 'img-horizontal',
@@ -46,6 +72,13 @@ const image_json = [
 
 ]
 
+// const image_json_2025 = [
+//   { 
+//     src: 'https://amzn-s3-photography-portfolio.s3.us-east-2.amazonaws.com/travel/banff/banff-2025-northernlights-1.avif', 
+//     orientation: 'img-horizontal',
+//   },
+// ]
+
 
 const Banff = () => {
   const data = {siteName: "banff nat'l park, canada 🇨🇦"}
@@ -54,8 +87,8 @@ const Banff = () => {
       <Header data={data}/>
 
       <Gallery 
-        title = 'september 2022'
-        subtitle = 'hiking in banff ft. 3am drives to moraine lake'
+        title = 'march 2025 & september 2022'
+        subtitle = 'hiking, skiing and aurora hunting in banff'
         images = {image_json}
       />
 
