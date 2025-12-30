@@ -1,0 +1,37 @@
+/* app-container – size of entire web app and responsive design */
+.app {
+  margin: 0 20%;
+}
+@media (max-width: 1920px) {
+  .app {
+    margin: 0 15%;
+  }  
+}
+
+@media (max-width: 1440px) {
+  .app {
+    margin: 0 10%;
+  }  
+}
+
+@media (max-width: 1024px) {
+  .app {
+    margin: 0 8%;
+  }  
+}
+
+@media (max-width: 768px) {
+  .app {
+    margin: 0 7%;
+  }  
+}
+
+@media (max-width: 576px) {
+  .app {
+    margin: 0 5%;
+  }  
+}
+.app {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}

@@ -1,0 +1,17 @@
+[
+    {   "title": "about", 
+        "link": "/about", 
+        "page": true,
+        "dropdown": ""
+    },
+    {   "title": "bookings", 
+        "link": "/bookings", 
+        "page": false,
+        "dropdown": ""
+    },
+    {   "title": "portfolio", 
+        "link": "/photos", 
+        "page": true,
+        "dropdown": ""
+    }
+]

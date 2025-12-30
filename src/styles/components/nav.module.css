@@ -1,0 +1,193 @@
+/* nav.module.css 
+* local styles for site-wide navigation
+*/
+
+/* navbar - wrapper object for top navigation system */
+.nav {
+    position: relative;
+    width: 100%;
+    height: calc(var(--nav-height-header) * 1px);
+}
+.nav__header, .nav__desktop, .nav__mobile {
+    background-color: var(--color-background-nav);
+    -webkit-backdrop-filter: var(--nav-blur);
+    backdrop-filter: var(--nav-blur);
+}
+
+/* nav__header - site header */
+.nav__header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: calc(var(--nav-height-header) * 1px);
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+/* @media (max-width: 576px) {
+    h3.nav__header_subtitle {
+        display: none;
+    }
+} */
+
+
+/* nav__desktop - desktop centered navigation */
+.nav__desktop {
+    height: var(--nav-height-bar);
+    width: 100%;
+    transition: box-shadow 200ms ease;
+}
+.nav__desktop_items {
+    height: var(--nav-height-bar);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 1rem;
+}
+.nav__desktop_link, .nav__mobile_link {
+    display: inline-block;
+    font-size: 16px;
+    font-family: var(--font-sans-primary);
+    color: rgb(var(--rgb-gray-semidark));
+}
+.nav--collapsed .nav__desktop {
+    position: fixed;
+    display: flex;
+    z-index: 2;
+    box-shadow: 0 2px 12px var(--color-boxshadow-primary);
+
+    .nav__desktop_items {
+        flex: 1 1 100%;
+    }
+}
+.nav--collapsed_title { 
+    display: none;
+}
+.nav--collapsed { 
+    .nav--collapsed_title {
+        z-index: 3;
+        position: fixed;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        left: 2.5em;
+
+        h1 {
+            font-size: 20px;
+            font-weight: 400;
+            color: rgb(var(--rgb-black));
+        }
+    }
+
+    .nav__mobile .nav--collapsed_title {
+        height: var(--nav-height-bar);
+        top: 0;
+    }
+}
+
+/* .nav__desktop__books {
+    display: inline-block;
+
+    &:hover {
+        cursor: pointer;
+    }
+}  */
+
+
+/* nav__mobile - mobile centered accordion navigation */
+.nav__mobile {
+    height: var(--nav-height-bar);
+    width: 100%;
+    transition: box-shadow 200ms ease;
+}
+.nav--collapsed .nav__mobile {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 0 2px 12px var(--color-boxshadow-primary);
+
+    .nav__desktop_items {
+        flex: 1 1 100%;
+    }
+    .nav__mobile_toggle {
+        position: fixed;
+        top: 13.5px;
+        right: 2.5em;
+    }
+}
+.nav__mobile_toggle {   
+    display: flex;
+    justify-content: center;
+
+    .nav__mobile_toggle_button {
+        position: absolute;
+        margin: 0 auto;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+
+        svg, path {
+            stroke: rgb(var(--rgb-gray-semidark));
+            fill: rgb(var(--rgb-gray-semidark));
+        }
+    }
+
+    .nav__mobile_toggle_button_show {
+        opacity: 1
+    }
+}
+.nav__mobile_menu {
+    height: calc(100vh - var(--nav-height-bar));
+    background-color: var(--color-background-nav);
+    position: fixed;
+    top: var(--nav-height-bar);
+    width: 100%;
+    * {
+        width: 100%;
+    }
+}  
+.nav__mobile_link {
+    display: block;
+    text-align: center;
+    padding: 0.5em 0;
+    transition: 0.25s ease-in-out;
+}
+.nav__mobile_link:hover,
+.nav__mobile_link:active,
+.nav__mobile_link:focus {
+    text-decoration: none;
+    background-color: rgba(var(--rgb-blue), 0.8);
+
+    .nav__mobile_link_text {
+        color: white;
+        font-weight: 600;
+    }
+}
+.nav__mobile--open, .nav--collapsed .nav__mobile--open {
+    height: calc(100vh - var(--nav-height-bar));
+    box-shadow: none;
+    .nav__mobile_menu {
+        background: transparent;
+    }
+}
+
+
+
+
+
+/* responsive screen sizing for mobile and desktop */
+@media (min-width: 768px) {
+    .nav--collapsed .nav__mobile, .nav__mobile {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .nav--collapsed .nav__desktop, .nav__desktop {
+        display: none;
+    }
+}

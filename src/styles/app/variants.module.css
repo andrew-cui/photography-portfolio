@@ -1,0 +1,63 @@
+/* context specific styles */
+
+
+/* CONTACT PAGE */
+.hyperlink__text--contact {
+    font-size: 14px;
+    justify-content: center;
+    &::after {
+        content: none;
+    }
+    &::before {
+        content: "";
+        display: inline-block;
+        background-color: var(--color-blue);
+        -webkit-mask: url("/icons/email.svg") no-repeat center;
+        mask: url("/icons/email.svg") no-repeat center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        height: 14px;
+        width: 14px;
+        margin: 0 4px 0 0;
+        transform: translateY(2.5px)
+    }
+}
+
+/* HYPERLINKS */
+.hyperlink--active {
+    color: var(--color-blue);
+    &::after {
+        background: var(--color-blue);
+        width: 100%;
+    }
+}
+.hyperlink--inline {
+    display: inline-block;
+    &::after {
+        width: 100%;
+        height: 1px;
+        inset: auto 0 1px 0;
+    }
+}
+.hyperlink--disabled {
+    color: var(--color-disabled);
+    font-weight: 100;
+    &:after {
+        display: none;
+    }
+}
+.hyperlink--no_underline {
+    &:hover, 
+    &:active, 
+    &:focus > .hyperlink__text,
+    .hyperlink--inline {
+        &::after {
+            width: 0;
+        }
+    }
+}
+.hyperlink--homepage_about {
+    h3 {
+        font-family: var(--font-sans-primary);
+    }
+}

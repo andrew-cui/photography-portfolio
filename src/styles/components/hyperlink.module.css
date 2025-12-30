@@ -1,0 +1,41 @@
+/* hyperlink
+ * custom object for hyperlinks
+ */
+
+ /* hyperlink - wrapper object */
+.hyperlink { 
+    display: inline-block;
+
+    &:hover, &:active, &:focus {
+        .hyperlink__text {
+            color:  var(--color-blue);
+            transition: color 0.25s ease 0.2s;
+            &::after {
+                background:  var(--color-blue);
+                width: 100%;
+                transition: width 0.25s ease 0.2s, background 0.25s ease 0.2s;
+            }
+        }
+    }
+}
+
+.hyperlink__text {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1em;
+    color: var(--color-text);
+    font-weight: 300;
+    margin: 0;
+    position: relative;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 -2px 0;
+        width: 0;
+        height: 2px;
+        background: var(--color-text);
+        transition: width 0.25s ease 0.2s, background 0.25s ease 0.2s;
+    }
+}
+

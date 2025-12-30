@@ -1,0 +1,165 @@
+/* EmailForm 
+ * ui component to have an emailJS form that takes in user inputs. used in /contact. only supports 1 input
+ */
+
+// packages 
+import { useState } from 'react'
+import clsx from 'clsx'
+import emailjs from 'emailjs-com'
+
+// components, styles & data
+import IconButton from '@components/ui/IconButton'
+import css from '@styles/components/form.module.css'
+import Spacer from '@components/layout/Spacer'
+
+// render
+export default function EmailForm() {
+    // emailJS params
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const userId = import.meta.env.VITE_EMAILJS_USER_ID;
+    const [submit, setIsSubmitted] = useState(false);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    })
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        })
+    }
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Form submitted:', formData);
+        emailjs.send(
+            serviceId,              // Email service ID
+            templateId,             // Email template ID
+            formData,               // Form data to send
+            userId                  // Your EmailJS user ID
+        ).then(
+            (response) => {
+                console.log('Email sent successfully', response);
+                alert('Email sent successfully!');
+            },  (err) => {
+                console.log('Email sending error', err);
+                alert('Failed to send email. Please try again.');
+            }
+        )
+        setIsSubmitted(true);
+        setFormData({   name: '',  email: '',    subject: '',    message: ''    });
+    }
+
+    return (
+        <div className={css.contactForm__container}>
+            <div className={clsx(
+                            css.contactForm__title,
+                            submit && css['contactForm--submitted-hide']    
+                        )}>
+                <h3>send me an <i className="bi bi-envelope-at"></i> here!</h3>
+            </div>
+            {!submit && <Spacer size={"s"}/>}
+
+            {/* Contact form */}
+            <form 
+                name="contactForm" 
+                onSubmit={handleSubmit} 
+                className={clsx(
+                            css.contactForm__form
+                        )}
+                data-netlify="true">
+                <div className={css.contactForm__input_sender}>
+                    <div className={clsx(
+                            css.contactForm__input,
+                            submit && css['contactForm--submitted-hide']
+                        )}
+                        id="form-name">
+                        <h4>Name</h4>
+                        <input 
+                            type="text" 
+                            placeholder="Name" 
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            data-1p-ignore />
+                    </div>
+                    <div className={clsx(
+                            css.contactForm__input,
+                            submit && css['contactForm--submitted-hide']
+                        )}
+                        id="form-email">
+                        <h4>Email</h4>
+                        <input 
+                            type="email" 
+                            placeholder="Email" 
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            required
+                            onChange={handleChange}
+                        />
+                    </div>
+                </div>
+
+                {/* Subject */}
+                <div className={clsx(
+                        css.contactForm__input,
+                        submit && css['contactForm--submitted-hide']
+                    )}
+                    id="form-subject">
+                    <h4>Subject</h4>
+                    <input 
+                        type="text" 
+                        placeholder="Subject" 
+                        id="subject"
+                        name="subject"
+                        value={formData.subject} 
+                        onChange={handleChange}
+                        data-1p-ignore
+                    />
+                </div>
+
+                {/* Message */}
+                <div className={clsx(
+                        css.contactForm__input,
+                        submit && css['contactForm--submitted-hide']
+                    )}
+                    id="form-message">
+                    <h4>Message</h4>
+                    <textarea 
+                        placeholder="Message" 
+                        id="message"
+                        name="message"
+                        value={formData.message} 
+                        onChange={handleChange}
+                        required
+                        data-1p-ignore
+                    />
+                </div>
+
+                <Spacer size={"s"}/>
+
+                {/* Submit */}
+                <div className={css.contactForm__submit}>
+                    {!submit &&     
+                    <IconButton
+                        icon={<i className="bi bi-envelope-check"></i>}
+                        label={'send message'}
+                        iconAfterText
+                        variant={'iconButton--contactForm__submit'}
+                        type={"submit"}/>        
+                    }                    
+                    <div className={submit ? css['contactForm--submitted-show'] : css['contactForm--submitted-hide']}>
+                        <p className={css.contactForm__submit_confirmation}>Sent, thank you!</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    )
+}

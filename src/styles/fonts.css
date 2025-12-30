@@ -1,0 +1,57 @@
+/* global – fonts and styles definition */
+:root {
+  --font-serif: "Cormorant Garamond", "Noto Serif", system-ui, serif;
+  --font-sans-primary: "Raleway", Avenir, system-ui, serif;
+  --font-sans-secondary: "Open Sans", Avenir, system-ui, Helvetica, sans-serif;  
+}
+
+h1, h2, h3, h4 {
+  margin: 0.25em 0;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.1;
+  font-family: var(--font-serif);
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 300;
+  font-family: var(--font-sans-primary);
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: var(--font-sans-primary);
+  color: rgb(var(--rgb-gray-medium));
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--font-sans-secondary);
+}
+
+h5 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: var(--font-sans-primary);
+  font-weight: 300;
+  opacity: 0.8;
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+p {
+  font-family: var(--font-sans-secondary);
+  font-weight: 200;
+  font-size: 14px;
+}
+
+a { 
+  color: var(--color-text);
+  text-decoration: none;
+  cursor: pointer;
+}

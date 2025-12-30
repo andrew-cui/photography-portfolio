@@ -1,0 +1,30 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
+import path from 'path'
+
+
+export default defineConfig({
+  server: {
+    host: "::",
+    port: 122,
+  },
+  plugins: [
+    react(),
+    tailwindcss(),
+    tsconfigPaths()
+  ],
+  resolve: {
+    alias: {
+      "@app": path.resolve(__dirname, "src/app"),
+      "@pages": path.resolve(__dirname, "src/pages"),
+      "@components": path.resolve(__dirname, "src/components"),
+      "@animations": path.resolve(__dirname, "src/components/layout/animations"),
+      "@data": path.resolve(__dirname, "src/data"),
+      "@css": path.resolve(__dirname, "src/css"),
+      "@styles": path.resolve(__dirname, "src/styles"),
+      "@/types": path.resolve(__dirname, "src/types"),
+    }
+  }
+})
