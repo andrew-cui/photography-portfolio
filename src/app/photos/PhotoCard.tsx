@@ -31,26 +31,26 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
         <div className={clsx(
             css.photoCard
         )}
-        onClick={onClick}>
+            onClick={onClick}>
             <div className={clsx(css.photoCard__img)}>
                 <img src={photo.src}
-                loading="lazy"
-                className={clsx(
-                    css['photoCard__img--v'],
-                    variant && css[`photoCard__img--${variant}`],
-                    // photo.aspect === 'h' && css['photoCard__img--h'],
-                )}/>
+                    loading="lazy"
+                    className={clsx(
+                        css['photoCard__img--v'],
+                        variant && css[`photoCard__img--${variant}`],
+                        // photo.aspect === 'h' && css['photoCard__img--h'],
+                    )} />
             </div>
             <div className={clsx(css.photoCard__overlay)}>
-                <h4 className={clsx(css.photoCard__overlay_subtitle)}>{photo.subtitle}</h4>
+                <h4 className={clsx(css.photoCard__overlay_subtitle)}>{photo.data?.subtitle}</h4>
                 <h2 className={clsx(css.photoCard__overlay_title)}>{photo.title}</h2>
                 <div className={css.photoCard__overlay_caption}>
-                    {photo.data.caption && <p className={css.photoCard__overlay_caption_primary}>{photo.data.caption}</p>}
-                    {photo.exif.camera && <p className={css.photoCard__overlay_caption_secondary}>{photo.exif.camera} • {photo.exif.focalLength}mm</p>}
-                    {photo.data.dateTaken && <p className={css.photoCard__overlay_caption_secondary}>{
-                    photo.data.dateTaken.toLocaleDateString(
-                        'en-US', { month: 'short', day: 'numeric', year: 'numeric' }
-                    )}</p>}
+                    {photo.data?.caption && <p className={css.photoCard__overlay_caption_primary}>{photo.data?.caption}</p>}
+                    {photo.exif?.camera && <p className={css.photoCard__overlay_caption_secondary}>{photo.exif?.camera} • {photo.exif?.focalLength}mm</p>}
+                    {photo.data?.dateTaken && <p className={css.photoCard__overlay_caption_secondary}>{
+                        photo.data?.dateTaken.toLocaleDateString(
+                            'en-US', { month: 'short', day: 'numeric', year: 'numeric' }
+                        )}</p>}
                 </div>
             </div>
         </div>

@@ -1,0 +1,180 @@
+/* lightbox.module.css */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(var(--rgb-gray-dark), 0.7);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    --lightbox-max-height: 75vh;
+}
+
+.lightbox__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox__figure {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    transition: all 0.3s ease;
+}
+
+.lightbox__img {
+    max-width: 100%;
+    max-height: var(--lightbox-max-height);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+/* Info Section */
+.lightbox__info {
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    max-width: 600px;
+    padding: 0 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.lightbox__title {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.lightbox__subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.lightbox__meta {
+    font-family: ui-monospace, monospace;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.05em;
+}
+
+
+
+.lightbox__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1010;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 12px;
+    transition: color 0.2s, transform 0.2s;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox__close:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.lightbox__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    padding: 20px;
+    z-index: 1010;
+    transition: all 0.2s;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox__nav:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.lightbox__nav--prev {
+    left: 24px;
+}
+
+.lightbox__nav--next {
+    right: 24px;
+}
+
+/* Bottom Progress Bar */
+.lightbox__progress {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 4px;
+    z-index: 1010;
+    width: 60vw;
+    max-width: 600px;
+}
+
+.lightbox__progress-line {
+    width: 30px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease, width 0.3s ease;
+    border-radius: 2px;
+}
+
+.lightbox__progress-line--active {
+    background-color: rgba(255, 255, 255, 1);
+    width: 50px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .lightbox__img {
+        max-height: 60vh;
+    }
+
+    .lightbox__progress {
+        bottom: 20px;
+    }
+}
