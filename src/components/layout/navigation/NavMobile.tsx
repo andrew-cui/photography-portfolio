@@ -37,7 +37,7 @@ export default function NavMobile ({
             <div className={css.nav__mobile_toggle}>
                 <button className={clsx(
                     css['nav__mobile_toggle_button'],
-                    !isOpenMobile && css['nav__mobile_toggle_button_show'])} onClick={toggleMobileNavbar}>
+                    isOpenMobile && css['nav__mobile_toggle_button_show'])} onClick={toggleMobileNavbar}>
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28" viewBox="0 0 50 50">
                     <path d="M 0 25 L 50 25" stroke="black" strokeWidth="3" transform="rotate(45 25 25)"/>
                     <path d="M 0 25 L 50 25" stroke="black" strokeWidth="3" transform="rotate(-45 25 25)"/>
@@ -45,7 +45,7 @@ export default function NavMobile ({
                 </button>
                 <button className={clsx(
                     css['nav__mobile_toggle_button'],
-                    isOpenMobile && css['nav__mobile_toggle_button_show'])} onClick={toggleMobileNavbar}
+                    !isOpenMobile && css['nav__mobile_toggle_button_show'])} onClick={toggleMobileNavbar}
                     style={{strokeWidth: 0}}>
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28" viewBox="0 0 50 50">
                     <path d="M 0 16 L 0 18 L 50 18 L 50 16 Z M 0 32 L 0 34 L 50 34 L 50 32 Z"></path>

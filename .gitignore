@@ -28,3 +28,9 @@ git/
 *.njsproj
 *.sln
 *.sw?
+
+
+# Photos directories
+public/banff/*
+public/como/*
+public/switzerland/*

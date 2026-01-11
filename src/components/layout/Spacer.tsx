@@ -9,18 +9,21 @@ import clsx from 'clsx'
 import css from '@styles/components/spacer.module.css'
 
 // render
+
+export type SpacerSize = "xs" | "s" | "m" | "l" | "xl" | "none"
+
 export default function Spacer({
     size = "s",
     inline = false
 }: {
-    size?: "xs" | "s" | "m" | "l" | "xl"
+    size?: SpacerSize
     inline?: boolean
 }) {
     return (
-    <div className={clsx(
-        clsx(
-            css.spacer, 
-            css[`spacer--${size ?? "s"}`],
-            inline && css['spacer--inline'])
-    )}/>)
+        <div className={clsx(
+            clsx(
+                css.spacer,
+                css[`spacer--${size ?? "s"}`],
+                inline && css['spacer--inline'])
+        )} />)
 }

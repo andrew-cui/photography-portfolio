@@ -32,7 +32,9 @@
       "@styles/*": ["styles/*"],
       "@data/*": ["data/*"],
       "@/types/*": ["types/*"],
+      "@photos/*": ["data/photos/*"],
+      "@photos": ["data/photos"],
     }
   },
-  "include": ["src"]
+  "include": ["src", "src/app/photos/.tsx"]
 }

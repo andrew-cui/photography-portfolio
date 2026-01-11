@@ -1,0 +1,7 @@
+.photoGallery_tags {
+    margin-top: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    row-gap: 5px;
+}

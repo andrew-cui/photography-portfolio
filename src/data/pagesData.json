@@ -1,16 +1,19 @@
 [
-    {   "title": "about", 
-        "link": "/about", 
+    {
+        "title": "about",
+        "link": "/about",
         "page": true,
         "dropdown": ""
     },
-    {   "title": "bookings", 
-        "link": "/bookings", 
-        "page": false,
+    {
+        "title": "dev-banff",
+        "link": "/photos/banff",
+        "page": true,
         "dropdown": ""
     },
-    {   "title": "portfolio", 
-        "link": "/photos", 
+    {
+        "title": "dev-switzerland",
+        "link": "/photos/switzerland",
         "page": true,
         "dropdown": ""
     }

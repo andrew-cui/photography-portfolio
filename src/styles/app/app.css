@@ -1,37 +1,24 @@
 /* app-container – size of entire web app and responsive design */
 .app {
-  margin: 0 20%;
-}
-@media (max-width: 1920px) {
-  .app {
-    margin: 0 15%;
-  }  
-}
-
-@media (max-width: 1440px) {
-  .app {
-    margin: 0 10%;
-  }  
+  --app-mt: 40px;
+  --app-mb: 120px;
+  --app-mx: 8%;
+  margin: var(--app-mt) var(--app-mx);
+  margin-bottom: var(--app-mb);
 }
 
-@media (max-width: 1024px) {
+.app.app--homepage {
+  --app-mt: 120px;
+}
+
+@media (max-width: 1200px) {
   .app {
-    margin: 0 8%;
-  }  
+    --app-mx: 7%;
+  }
 }
 
 @media (max-width: 768px) {
   .app {
-    margin: 0 7%;
-  }  
-}
-
-@media (max-width: 576px) {
-  .app {
-    margin: 0 5%;
-  }  
-}
-.app {
-  margin-top: 120px;
-  margin-bottom: 120px;
+    --app-mx: 5%;
+  }
 }

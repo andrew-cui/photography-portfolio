@@ -3,16 +3,31 @@ import { ReactNode } from 'react'
 export type PhotoProps = {
     // text: ReactNode | string;
     src: string;
-    // classes?: string;       // custom CSS classes
-    // variant?: string;       // custom CSS classes for context
+    href?: string | null;
+    title?: string | ReactNode | null;
+    galleryName: string;
 
+    data?: {
+        subtitle?: string | ReactNode | null;
+        caption?: string | ReactNode | null;
+        category?: string | null;
+        location?: string | null;
+        dateTaken?: Date | null;
+        tags?: string[] | null;
+    };
+    exif?: {
+        camera?: 'a7iii' | 'iPhone' | 'film' | 'other' | null;
+        lens?: string | null;
+        focalLength?: number | null;
+        shutterSpeed?: number | null;
+        aperture?: number | null;
+        iso?: number | null;
+    }
     // functional properties
-    // active?: boolean        // active page = keep underline active
-    // external?: boolean      // true = stay on site and don't redirect into new tab
+    aspect?: "v" | "h";        // active page = keep underline active
+    // external?: boolean;         // true = stay on site and don't redirect into new tab
+    order?: number | null;
 
     // styles
-    // disabled?: boolean;     // true = don't allow clicks
-    // inline?: boolean        // true = show as inline
-    // underline?: boolean     // false = omit underline animation
-    // arrow?: boolean         // true = include arrow
+    // variant?: string;          // custom CSS classes for context
 };

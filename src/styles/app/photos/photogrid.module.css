@@ -1,0 +1,16 @@
+
+.photoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 5px;
+}
+.photoGridTitle {
+    display: block;
+    width: 100%;
+    h5 {
+        text-align: left;
+    }
+}
+@media (max-width: 576px) {
+}

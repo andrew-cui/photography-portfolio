@@ -2,7 +2,7 @@
 
 
 
-### milestone 2
+### milestone 3
 - [] typescript
 - [] modular css
 - [] new homepage design
@@ -14,7 +14,7 @@
 - [] preloading & lazy loading
 - [] reduce s3 calls
 
-### milestone 1
+### milestone 2
 - [x] homepage v1
 - [x] medium+ navbar
 - [x] s3 public access
@@ -29,3 +29,7 @@
 - [x] collapsing navigation bar
 - [x] improved responsiveness design
 - [x] fix light vs. dark mode issue
+
+### milestone 1 & before
+- [x] express website / squarespace
+- [x] existing html/css website

@@ -25,6 +25,7 @@ export default defineConfig({
       "@css": path.resolve(__dirname, "src/css"),
       "@styles": path.resolve(__dirname, "src/styles"),
       "@/types": path.resolve(__dirname, "src/types"),
+      "@photos": path.resolve(__dirname, "src/data/photos"),
     }
   }
 })

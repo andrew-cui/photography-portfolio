@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
-import {  BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import HomePage from '@app/HomePage'
-// import ContactPage from '@app/ContactPage'
-// import BooksPage from '@app/books/BooksPage'
 import { Navigation, Footer } from '@components'
+import AlbumPage from '@app/photos/AlbumPage'
 
-
-function TopOfPage (): null {
+function TopOfPage(): null {
   const location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to top whenever the route changes
@@ -18,26 +16,23 @@ function App() {
   const location = useLocation();
 
   return (
-      <div>
-        <TopOfPage /> 
-        <Navigation />
-        <Routes location={location}>
-          <Route path="/" element={<HomePage />} />
-          {/* <Route path="/contact" element={<ContactPage />} />
-          <Route path="/form" element={<ContactPage/>} />
-          <Route path="/books" element={<BooksPage/>} /> */}
-
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-        <Footer/>
-      </div>
+    <div>
+      <TopOfPage />
+      <Navigation />
+      <Routes location={location}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/photos/:albumId" element={<AlbumPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+      <Footer />
+    </div>
   )
 }
 
 
 const Root = () => (
-  <BrowserRouter  
-    basename="/" 
+  <BrowserRouter
+    basename="/"
     {...({
       future: {
         v7_relativeSplatPath: true,

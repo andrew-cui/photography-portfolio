@@ -15,7 +15,7 @@ import { AnimateFadeIn } from '@components/layout/animations/AnimateFadeIn'
 import css from '@styles/components/nav.module.css'
 
 import pagesData from '@data/pagesData.json'
-import { navHeightHeader } from '@data/constants';
+import { navHeightHeader, navRadius } from '@data/constants';
 // import books from '@data/bookData'
 
 // render
@@ -36,7 +36,7 @@ export default function Navigation ({
     }
 
     const onScroll = () => {
-        setHideTitle(window.scrollY > navHeightHeader);
+        setHideTitle(window.scrollY > navHeightHeader + navRadius);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });

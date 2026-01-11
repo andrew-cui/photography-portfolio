@@ -2,8 +2,9 @@ button {
   cursor: pointer;
 }
 
-button.iconButton {
+.iconButton {
   background-color: var(--color-background-primary);
+  color: var(--color-text);
 }
 
 .iconButton {
@@ -16,10 +17,8 @@ button.iconButton {
   box-shadow: 1px 1px 3px rgba(var(--rgb-black), 0.15);
 
   transition: 0.25s ease-in-out;
-  color: var(--color-text);
 
   h4 {
-    color: var(--color-text);
     margin: 0;
   }
   span {
@@ -51,16 +50,16 @@ button.iconButton {
         fill: white;
         stroke: white;
     }
-    &:hover {
-        background-color: var(--color-background-white);
-        color: black;
-        svg, path {
-            fill: black;
-            stroke: black;
-        }
-    }
-}
 
+    &:hover {
+      background-color: var(--color-background-white);
+      color: black;
+      svg, path {
+          fill: black;
+          stroke: black;
+      }
+  }
+}
 
 .iconButton--contactForm__submit {
   justify-content: center;
