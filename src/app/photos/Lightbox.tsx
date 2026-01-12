@@ -142,12 +142,27 @@ const Lightbox: React.FC<LightboxProps> = ({
                                 {photo.data?.subtitle && <h4 className={css.lightbox__subtitle}>{photo.data.subtitle}</h4>}
                                 {photo.data?.caption && <p className={css.lightbox__subtitle} style={{ fontStyle: 'italic', marginTop: '4px' }}>{photo.data.caption}</p>}
                                 <div className={css.lightbox__meta}>
-                                    {formatExif(photo)}
                                     {photo.data?.dateTaken && (
-                                        <span> • {new Date(photo.data.dateTaken).toLocaleDateString()}</span>
+                                        <div className={css.lightbox__meta_datetime}><i className="bi bi-calendar-event" />
+                                            {typeof photo.data?.dateTaken === 'string'
+                                                ? photo.data.dateTaken
+                                                : photo.data?.dateTaken?.toLocaleDateString('en-US', {
+                                                    month: 'short',
+                                                    day: 'numeric',
+                                                    year: 'numeric'
+                                                })
+                                            }
+                                        </div>
                                     )}
-                                    <div style={{ marginTop: '4px', opacity: 0.6 }}>
-                                        {currentIndex + 1} / {totalCount}
+                                    {photo.data?.location && (
+                                        <div className={css.lightbox__meta_datetime}><i className="bi bi-pin-map-fill" />{photo.data.location}
+                                        </div>
+                                    )}
+                                    <div className={css.lightbox__meta_exif}>
+                                        {formatExif(photo).length > 0 && <i className="bi bi-camera2"></i>}{formatExif(photo)}
+                                    </div>
+                                    <div className={css.lightbox__meta_counter}>
+                                        img {currentIndex + 1} of {totalCount}
                                     </div>
                                 </div>
                             </motion.div>
@@ -167,8 +182,9 @@ const Lightbox: React.FC<LightboxProps> = ({
                         </div>
                     </div>
                 </motion.div>
-            )}
-        </AnimatePresence>
+            )
+            }
+        </AnimatePresence >
     )
 
     if (typeof document === 'undefined') return null;

@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 90vw;
+    max-width: 60vw;
     transition: all 0.3s ease;
 }
 
@@ -56,27 +56,44 @@
 }
 
 .lightbox__title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
     letter-spacing: 0.05em;
     margin-bottom: 0.25rem;
 }
 
 .lightbox__subtitle {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-background-nav);
+    margin-bottom: 20px;
+    font-weight: 300;
 }
 
 .lightbox__meta {
+    font-size: 13px;
+    color: var(--color-background-nav);
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+.lightbox__meta_datetime {
+    font-family: var(--font-sans-primary);
+    margin-bottom: 5px;
+}
+
+.lightbox__meta_exif {
     font-family: ui-monospace, monospace;
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
     letter-spacing: 0.05em;
 }
 
-
+.lightbox__meta_counter {
+    margin-top: 20px;
+    opacity: 0.6;
+    font-family: var(--font-sans-secondary);
+}
 
 .lightbox__close {
     position: absolute;

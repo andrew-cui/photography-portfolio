@@ -59,18 +59,20 @@ export default function PhotoGallery({
                     )
                 })}
             </div>}
-            <Spacer size='m' />
+            {!homePage && <Spacer size='m' />}
             {hasMultipleGrids ? (
                 (photoGrids as PhotoGridProps[]).map((item, index) => (
                     <PhotoGrid
                         key={index}
                         title={item.title}
                         subtitle={item.subtitle}
-                        photoData={item.photoData} />
+                        photoData={item.photoData}
+                        navigation />
                 ))
             ) : (
                 <PhotoGrid
-                    photoData={photoGrids as PhotoProps[]} />
+                    photoData={photoGrids as PhotoProps[]}
+                    navigation />
             )}
         </div>
     )

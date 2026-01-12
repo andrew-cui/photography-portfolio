@@ -1,0 +1,224 @@
+{
+    "galleryName": "Banff",
+    "category": "travel",
+    "photos": [
+        {
+            "title": "Moraine Lake at sunrise",
+            "src": "morainelake.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": null,
+                "location": null,
+                "dateTaken": "2022-09-24T12:00:00.000Z",
+                "tags": [
+                    "fall"
+                ]
+            },
+            "exif": {
+                "camera": "a7iii",
+                "lens": null,
+                "focalLength": 17,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "h",
+            "order": 1
+        },
+        {
+            "title": "Canoeing on the lake",
+            "src": "morainelakecanoeclub.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": null,
+                "location": null,
+                "dateTaken": null,
+                "tags": [
+                    "fall"
+                ]
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 2
+        },
+        {
+            "title": "Larch Valley Trail",
+            "src": "larchvalley.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": "Arrived just in time for the golden larches to bloom",
+                "location": null,
+                "dateTaken": "2022-09-24T12:00:00.000Z",
+                "tags": [
+                    "fall"
+                ]
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 3
+        },
+        {
+            "title": "Mt. Assiniboine",
+            "src": "banff-2025-assiniboine.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": "Seen from Banff Sunshine",
+                "location": null,
+                "dateTaken": null,
+                "tags": [
+                    "winter"
+                ]
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 4
+        },
+        {
+            "title": "Banff Sunshine",
+            "src": "banff-2025-sunshine.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": "Ski season",
+                "location": null,
+                "dateTaken": "2025-03-05T12:00:00.000Z",
+                "tags": [
+                    "winter",
+                    "skiing"
+                ]
+            },
+            "exif": {
+                "camera": "a7iii",
+                "lens": "70-180mm",
+                "focalLength": 150,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 7
+        },
+        {
+            "title": "Lake Louise Ski Resort",
+            "src": "banff-2025-lakelouise.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": "Skiiers at Lake Louise",
+                "location": null,
+                "dateTaken": null,
+                "tags": [
+                    "winter",
+                    "skiing"
+                ]
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 8
+        },
+        {
+            "title": "Northern Lights",
+            "src": "banff-nl-vermillion.avif",
+            "href": null,
+            "data": {
+                "subtitle": "Vermillion Lakes, Banff",
+                "caption": null,
+                "location": null,
+                "dateTaken": null,
+                "tags": [
+                    "northern lights"
+                ]
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 90
+        },
+        {
+            "title": "Northern Lights",
+            "src": "banff-nl-calgary2.avif",
+            "href": null,
+            "data": {
+                "subtitle": "Calgary, AB",
+                "caption": null,
+                "location": null,
+                "dateTaken": null,
+                "tags": [
+                    "northern lights"
+                ]
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 91
+        },
+        {
+            "title": "Northern Lights",
+            "src": "banff-nl-calgary1.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": null,
+                "location": null,
+                "dateTaken": null,
+                "tags": [
+                    "northern lights"
+                ]
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 92
+        }
+    ]
+}

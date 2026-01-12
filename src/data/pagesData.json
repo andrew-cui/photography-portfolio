@@ -6,14 +6,20 @@
         "dropdown": ""
     },
     {
-        "title": "dev-banff",
+        "title": "banff",
         "link": "/photos/banff",
         "page": true,
         "dropdown": ""
     },
     {
-        "title": "dev-switzerland",
+        "title": "switzerland",
         "link": "/photos/switzerland",
+        "page": true,
+        "dropdown": ""
+    },
+    {
+        "title": "lake como",
+        "link": "/photos/como",
         "page": true,
         "dropdown": ""
     }

@@ -1,24 +1,54 @@
+
 import { useParams, Navigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import PhotoGallery from '@app/photos/PhotoGallery'
-import { albums } from '@data/albums'
+import { photoAlbums } from '@data/photos'
 import { AnimateFadeIn } from '@components/layout/animations/AnimateFadeIn'
+import type { AlbumConfig } from '@/types/album'
 
 export default function AlbumPage() {
     const { albumId } = useParams()
+    const [config, setConfig] = useState<AlbumConfig | null>(null)
+    const [loading, setLoading] = useState(true)
 
-    // Safety check - if no ID, redirect home
-    if (!albumId) return <Navigate to="/" replace />
+    useEffect(() => {
+        async function loadAlbum() {
+            if (!albumId || !photoAlbums[albumId]) {
+                setLoading(false)
+                return
+            }
 
-    const config = albums[albumId]
+            try {
+                const albumConfig = await photoAlbums[albumId]()
+                setConfig(albumConfig)
+            } catch (error) {
+                console.error('Failed to load album:', error)
+            } finally {
+                setLoading(false)
+            }
+        }
 
-    // If album doesn't exist, redirect home (or could show 404)
-    if (!config) return <Navigate to="/" replace />
+        loadAlbum()
+    }, [albumId])
+
+    // Safety checks
+    if (!albumId || !photoAlbums[albumId]) {
+        console.log(albumId)
+        return <Navigate to="/" replace />
+    }
+
+    if (loading) {
+        return <div>Loading...</div> // Or your loading component
+    }
+
+    if (!config) {
+        return <Navigate to="/" replace />
+    }
 
     return (
         <AnimateFadeIn
             key={albumId}
-            ReactDOMElement={<PhotoGallery
-                {...config}
-            />} />
+            ReactDOMElement={<PhotoGallery {...config} />}
+        />
     )
 }

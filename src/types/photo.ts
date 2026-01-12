@@ -16,7 +16,7 @@ export type PhotoProps = {
         tags?: string[] | null;
     };
     exif?: {
-        camera?: 'a7iii' | 'iPhone' | 'film' | 'other' | null;
+        camera?: 'a7iii' | 'a7ii' | 'iPhone' | 'film' | 'other' | null;
         lens?: string | null;
         focalLength?: number | null;
         shutterSpeed?: number | null;

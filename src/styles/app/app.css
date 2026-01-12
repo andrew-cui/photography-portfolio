@@ -8,7 +8,7 @@
 }
 
 .app.app--homepage {
-  --app-mt: 120px;
+  --app-mt: 90px;
 }
 
 @media (max-width: 1200px) {

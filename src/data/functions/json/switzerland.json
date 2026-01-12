@@ -1,0 +1,336 @@
+{
+    "galleryName": "Switzerland",
+    "category": "travel",
+    "photos": [
+        {
+            "title": "Matterhorn",
+            "src": "zermatt-matterhorn.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": "Matterhorn peeking out from the clouds",
+                "location": "Zermatt",
+                "dateTaken": "2023-06-13T12:00:00.000Z",
+                "tags": []
+            },
+            "exif": {
+                "camera": "a7iii",
+                "lens": "70-180mm f/2.8",
+                "focalLength": 108,
+                "shutterSpeed": 3200,
+                "aperture": 10,
+                "iso": 640
+            },
+            "aspect": "v",
+            "order": 1
+        },
+        {
+            "title": "Jungfraubahn",
+            "src": "jungfraubahn.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": "Highest train in Europe",
+                "location": "Eigergletscher",
+                "dateTaken": null,
+                "tags": []
+            },
+            "exif": {
+                "camera": "a7ii",
+                "lens": "50mm f1.8",
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 2
+        },
+        {
+            "title": "Lauterbrunnen",
+            "src": "lauterbrunnen.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": null,
+                "location": null,
+                "dateTaken": null,
+                "tags": []
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 3
+        },
+        {
+            "title": "Kleine Scheidegg",
+            "src": "kleine-schdeigg.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": null,
+                "location": null,
+                "dateTaken": null,
+                "tags": []
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 4
+        },
+        {
+            "title": "Wengen",
+            "src": "wengen.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": null,
+                "location": null,
+                "dateTaken": null,
+                "tags": []
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 5
+        },
+        {
+            "title": "Zurich",
+            "src": "zurich.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": null,
+                "location": null,
+                "dateTaken": null,
+                "tags": []
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 6
+        },
+        {
+            "title": "Zermatt",
+            "src": "zermatt-1.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": "Abandoned ski lifts in the summer",
+                "location": "Zermatt",
+                "dateTaken": "2023-06-13T12:00:00.000Z",
+                "tags": []
+            },
+            "exif": {
+                "camera": "a7iii",
+                "lens": "70-180mm f/2.8",
+                "focalLength": 70,
+                "shutterSpeed": 640,
+                "aperture": 6.3,
+                "iso": 160
+            },
+            "aspect": "v",
+            "order": 7
+        },
+        {
+            "title": "Zermatt",
+            "src": "zermatt-2.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": null,
+                "location": "Zermatt",
+                "dateTaken": "2023-06-13T12:00:00.000Z",
+                "tags": []
+            },
+            "exif": {
+                "camera": "a7iii",
+                "lens": "70-180mm f/2.8",
+                "focalLength": 88,
+                "shutterSpeed": 1250,
+                "aperture": 4,
+                "iso": 250
+            },
+            "aspect": "v",
+            "order": 8
+        },
+        {
+            "title": "Zermatt",
+            "src": "zermatt-3.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": "Confused Swiss sheep",
+                "location": "Zermatt",
+                "dateTaken": "2023-06-13T12:00:00.000Z",
+                "tags": []
+            },
+            "exif": {
+                "camera": "a7iii",
+                "lens": "70-180mm f/2.8",
+                "focalLength": 143,
+                "shutterSpeed": 2500,
+                "aperture": 3.5,
+                "iso": 160
+            },
+            "aspect": "v",
+            "order": 9
+        },
+        {
+            "title": "Lucerne",
+            "src": "lucerne-1.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": null,
+                "location": null,
+                "dateTaken": null,
+                "tags": []
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 10
+        },
+        {
+            "title": "Lucerne",
+            "src": "lucerne-2.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": null,
+                "location": null,
+                "dateTaken": null,
+                "tags": []
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 11
+        },
+        {
+            "title": "Andermatt",
+            "src": "andermatt.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": "Church of St. Peter & Paul",
+                "location": "Andermatt",
+                "dateTaken": "2023-06-12T12:00:00.000Z",
+                "tags": []
+            },
+            "exif": {
+                "camera": "a7iii",
+                "lens": "70-180mm f/2.8",
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 12
+        },
+        {
+            "title": "Lucerne",
+            "src": "lucerne-3.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": null,
+                "location": null,
+                "dateTaken": null,
+                "tags": []
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 12
+        },
+        {
+            "title": "Lausanne",
+            "src": "lausanne.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": null,
+                "location": null,
+                "dateTaken": null,
+                "tags": []
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 12
+        },
+        {
+            "title": "Eiger Express",
+            "src": "eiger-express.avif",
+            "href": null,
+            "data": {
+                "subtitle": null,
+                "caption": "Cable car to Grindelwald",
+                "location": "Grindelwald",
+                "dateTaken": null,
+                "tags": []
+            },
+            "exif": {
+                "camera": null,
+                "lens": null,
+                "focalLength": null,
+                "shutterSpeed": null,
+                "aperture": null,
+                "iso": null
+            },
+            "aspect": "v",
+            "order": 13
+        }
+    ]
+}

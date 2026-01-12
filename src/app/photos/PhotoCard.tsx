@@ -23,7 +23,7 @@ interface PhotoCardProps {
 // render
 const PhotoCard: React.FC<PhotoCardProps> = ({
     photo,
-    variant = 'hi',
+    variant = '',
     external = false,
     onClick
 }) => {
@@ -45,15 +45,23 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
                 <h4 className={clsx(css.photoCard__overlay_subtitle)}>{photo.data?.subtitle}</h4>
                 <h2 className={clsx(css.photoCard__overlay_title)}>{photo.title}</h2>
                 <div className={css.photoCard__overlay_caption}>
-                    {photo.data?.caption && <p className={css.photoCard__overlay_caption_primary}>{photo.data?.caption}</p>}
-                    {photo.exif?.camera && <p className={css.photoCard__overlay_caption_secondary}>{photo.exif?.camera} • {photo.exif?.focalLength}mm</p>}
-                    {photo.data?.dateTaken && <p className={css.photoCard__overlay_caption_secondary}>{
-                        photo.data?.dateTaken.toLocaleDateString(
-                            'en-US', { month: 'short', day: 'numeric', year: 'numeric' }
-                        )}</p>}
+                    {photo.data?.caption}
+                </div>
+                <div className={css.photoCard__overlay_datetime}>
+                    {photo.data?.dateTaken &&
+                        <span><i className="bi bi-calendar-event" />
+                            {typeof photo.data?.dateTaken === 'string'
+                                ? photo.data.dateTaken
+                                : photo.data?.dateTaken?.toLocaleDateString('en-US', {
+                                    month: 'short',
+                                    day: 'numeric',
+                                    year: 'numeric'
+                                })
+                            }</span>}
+                    {photo.data?.location && <span><i className="bi bi-pin-map-fill" /> {photo.data?.location}</span>}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

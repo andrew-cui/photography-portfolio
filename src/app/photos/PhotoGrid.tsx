@@ -13,14 +13,17 @@ import { Hyperlink, Spacer, AnimateFadeIn, IconButton, type SpacerSize } from '@
 import type { PhotoGridProps } from '@/types/photogrid'
 import PhotoCard from '@app/photos/PhotoCard'
 import Lightbox from '@app/photos/Lightbox'
+import { useNavigate } from 'react-router-dom'
 
 // render
 const PhotoGrid: React.FC<PhotoGridProps> = ({
     title = '',
     subtitle = '',
     photoData = [],
-    spacer = 'm' as SpacerSize
+    spacer = 'm' as SpacerSize,
+    navigation = false
 }) => {
+    const navigate = useNavigate()
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -50,7 +53,9 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({
                             <PhotoCard
                                 key={index}
                                 photo={photo}
-                                onClick={() => openLightbox(index)}
+                                onClick={navigation && photo.href
+                                    ? () => navigate(photo.href!)
+                                    : () => openLightbox(index)}
                             />
                         )
                     })}
