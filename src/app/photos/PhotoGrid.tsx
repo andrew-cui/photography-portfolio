@@ -21,7 +21,8 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({
     subtitle = '',
     photoData = [],
     spacer = 'm' as SpacerSize,
-    navigation = false
+    navigation = false,
+    homePage = false
 }) => {
     const navigate = useNavigate()
     const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -53,6 +54,7 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({
                             <PhotoCard
                                 key={index}
                                 photo={photo}
+                                homePage={homePage}
                                 onClick={navigation && photo.href
                                     ? () => navigate(photo.href!)
                                     : () => openLightbox(index)}

@@ -3,22 +3,42 @@
  */
 
 
-// packages 
-import clsx from 'clsx'
+import { useState, useEffect } from 'react'
 
 // components, styles & data
-import { Hyperlink, Spacer, AnimateFadeIn } from '@components'
-import css from '@styles/app/home.module.css'
+import { AnimateFadeIn } from '@components'
 import PhotoGallery from '@app/photos/PhotoGallery'
-import home from '@data/functions/json/_home'
+import { photoAlbums } from '@data/photos'
+import type { AlbumConfig } from '@/types/album'
 
 // render
 export default function HomePage() {
+    const [config, setConfig] = useState<AlbumConfig | null>(null)
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        async function loadHome() {
+            try {
+                const homeConfig = await photoAlbums.home()
+                setConfig(homeConfig)
+            } catch (error) {
+                console.error('Failed to load home photos:', error)
+            } finally {
+                setLoading(false)
+            }
+        }
+        loadHome()
+    }, [])
+
+    if (loading || !config) {
+        return null // Or a loading spinner
+    }
+
     return (
         <AnimateFadeIn ReactDOMElement={
             <PhotoGallery
+                {...config}
                 title={undefined}
-                photoGrids={home.photos}
                 homePage
                 navigation />
         } />

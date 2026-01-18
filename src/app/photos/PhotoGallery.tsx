@@ -50,8 +50,8 @@ export default function PhotoGallery({
             <h1>{title}</h1>
             <h3>{subtitle}</h3>
             <h4>{date}</h4>
-            {tags.length > 0 && <div className={css.photoGallery_tags}>
-                {tags.map((tag, index) => {
+            {tags.filter(t => !!t).length > 0 && <div className={css.photoGallery_tags}>
+                {tags.filter(t => !!t).map((tag, index) => {
                     return (
                         <IconButton
                             key={index}
@@ -67,11 +67,13 @@ export default function PhotoGallery({
                         title={item.title}
                         subtitle={item.subtitle}
                         photoData={item.photoData}
+                        homePage={homePage}
                         navigation />
                 ))
             ) : (
                 <PhotoGrid
                     photoData={photoGrids as PhotoProps[]}
+                    homePage={homePage}
                     navigation />
             )}
         </div>

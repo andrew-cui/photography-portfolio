@@ -144,14 +144,7 @@ const Lightbox: React.FC<LightboxProps> = ({
                                 <div className={css.lightbox__meta}>
                                     {photo.data?.dateTaken && (
                                         <div className={css.lightbox__meta_datetime}><i className="bi bi-calendar-event" />
-                                            {typeof photo.data?.dateTaken === 'string'
-                                                ? photo.data.dateTaken
-                                                : photo.data?.dateTaken?.toLocaleDateString('en-US', {
-                                                    month: 'short',
-                                                    day: 'numeric',
-                                                    year: 'numeric'
-                                                })
-                                            }
+                                            {photo.data.dateTaken}
                                         </div>
                                     )}
                                     {photo.data?.location && (

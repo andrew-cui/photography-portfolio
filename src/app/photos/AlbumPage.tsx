@@ -7,7 +7,7 @@ import { AnimateFadeIn } from '@components/layout/animations/AnimateFadeIn'
 import type { AlbumConfig } from '@/types/album'
 
 export default function AlbumPage() {
-    const { albumId } = useParams()
+    const { category, albumId } = useParams()
     const [config, setConfig] = useState<AlbumConfig | null>(null)
     const [loading, setLoading] = useState(true)
 
@@ -38,7 +38,7 @@ export default function AlbumPage() {
     }
 
     if (loading) {
-        return <div>Loading...</div> // Or your loading component
+        return null
     }
 
     if (!config) {

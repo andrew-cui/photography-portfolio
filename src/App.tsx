@@ -21,7 +21,7 @@ function App() {
       <Navigation />
       <Routes location={location}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/photos/:albumId" element={<AlbumPage />} />
+        <Route path="/photos/:category/:albumId" element={<AlbumPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />

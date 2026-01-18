@@ -16,7 +16,8 @@ interface PhotoCardProps {
     photo: PhotoProps;
     variant?: string;
     external?: boolean;
-    imageOnly?: boolean
+    imageOnly?: boolean;
+    homePage?: boolean;
     onClick?: () => void;
 }
 
@@ -25,6 +26,7 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
     photo,
     variant = '',
     external = false,
+    homePage = false,
     onClick
 }) => {
     return (
@@ -42,23 +44,20 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
                     )} />
             </div>
             <div className={clsx(css.photoCard__overlay)}>
-                <h4 className={clsx(css.photoCard__overlay_subtitle)}>{photo.data?.subtitle}</h4>
+                {homePage && photo.data?.category && (
+                    <div className={css.photoCard__overlay_chip}>
+                        {photo.data.category}
+                    </div>
+                )}
+                {!homePage && <h4 className={clsx(css.photoCard__overlay_subtitle)}>{photo.data?.subtitle}</h4>}
                 <h2 className={clsx(css.photoCard__overlay_title)}>{photo.title}</h2>
-                <div className={css.photoCard__overlay_caption}>
+                {!homePage && <div className={css.photoCard__overlay_caption}>
                     {photo.data?.caption}
-                </div>
+                </div>}
                 <div className={css.photoCard__overlay_datetime}>
                     {photo.data?.dateTaken &&
-                        <span><i className="bi bi-calendar-event" />
-                            {typeof photo.data?.dateTaken === 'string'
-                                ? photo.data.dateTaken
-                                : photo.data?.dateTaken?.toLocaleDateString('en-US', {
-                                    month: 'short',
-                                    day: 'numeric',
-                                    year: 'numeric'
-                                })
-                            }</span>}
-                    {photo.data?.location && <span><i className="bi bi-pin-map-fill" /> {photo.data?.location}</span>}
+                        <span><i className="bi bi-calendar-event" /> {photo.data.dateTaken}</span>}
+                    {!homePage && photo.data?.location && <span><i className="bi bi-pin-map-fill" /> {photo.data?.location}</span>}
                 </div>
             </div>
         </div >

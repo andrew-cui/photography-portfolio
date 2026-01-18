@@ -12,7 +12,7 @@ export type PhotoProps = {
         caption?: string | ReactNode | null;
         category?: string | null;
         location?: string | null;
-        dateTaken?: Date | null;
+        dateTaken?: string | null;
         tags?: string[] | null;
     };
     exif?: {

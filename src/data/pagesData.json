@@ -7,19 +7,25 @@
     },
     {
         "title": "banff",
-        "link": "/photos/banff",
+        "link": "/photos/travel/banff",
         "page": true,
         "dropdown": ""
     },
     {
         "title": "switzerland",
-        "link": "/photos/switzerland",
+        "link": "/photos/travel/switzerland",
         "page": true,
         "dropdown": ""
     },
     {
         "title": "lake como",
-        "link": "/photos/como",
+        "link": "/photos/travel/como",
+        "page": true,
+        "dropdown": ""
+    },
+    {
+        "title": "greece",
+        "link": "/photos/travel/greece",
         "page": true,
         "dropdown": ""
     }

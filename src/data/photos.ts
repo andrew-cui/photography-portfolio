@@ -1,57 +1,37 @@
 import type { AlbumConfig } from '@/types/album'
-import { loadPhotos } from './photoLoader'
-import { configBanff, configLakeComo, configSwitzerland } from './functions/config/albumConfigs'
-import { configHome } from './functions/config/appConfigs'
+import { loadPhotosFromCSV } from './dataService'
+import { albumConfigs } from './config/albumConfigs'
 
-// Album loader functions
-async function loadBanff(): Promise<AlbumConfig> {
-    const photos = await loadPhotos('banff')
-    return {
-        ...configBanff,
-        photoGrids: [
-            {
-                ...configBanff.photoGrids[0],
-                photoData: photos.filter(p => p.data?.tags?.includes('fall'))
-            },
-            {
-                ...configBanff.photoGrids[1],
-                photoData: photos.filter(p =>
-                    p.data?.tags?.includes('winter') ||
-                    p.data?.tags?.includes('northern lights')
-                )
+/**
+ * Dynamically builds the photoAlbums object from our config registry.
+ * This removes the need for manual loader functions for every new album.
+ */
+export const photoAlbums: Record<string, () => Promise<AlbumConfig>> = Object.keys(albumConfigs).reduce((acc, albumName) => {
+    acc[albumName] = async (): Promise<AlbumConfig> => {
+        const config = albumConfigs[albumName];
+        const allPhotos = await loadPhotosFromCSV(albumName, config.category);
+
+        // Map the grid configurations to actual photo data
+        const photoGrids = config.photoGrids.map(grid => {
+            let photoData = allPhotos;
+
+            // Apply declarative tag filtering if matchTags is provided
+            if (grid.matchTags && grid.matchTags.length > 0) {
+                photoData = allPhotos.filter(p =>
+                    p.data?.tags?.some(tag => grid.matchTags?.includes(tag))
+                );
             }
-        ]
-    }
-}
 
-async function loadSwitzerland(): Promise<AlbumConfig> {
-    const photos = await loadPhotos('switzerland')
-    return {
-        ...configSwitzerland,
-        photoGrids: [{ ...configSwitzerland.photoGrids[0], photoData: photos }]
-    }
-}
+            return {
+                ...grid,
+                photoData
+            };
+        });
 
-async function loadLakeComo(): Promise<AlbumConfig> {
-    const photos = await loadPhotos('como')
-    return {
-        ...configLakeComo,
-        photoGrids: [{ ...configLakeComo.photoGrids[0], photoData: photos }]
-    }
-}
-
-async function loadHome(): Promise<AlbumConfig> {
-    const photos = await loadPhotos('home')
-    return {
-        ...configHome,
-        photoGrids: [{ ...configHome.photoGrids[0], photoData: photos }]
-    }
-}
-
-// Export lookup object
-export const photoAlbums: Record<string, () => Promise<AlbumConfig>> = {
-    banff: loadBanff,
-    switzerland: loadSwitzerland,
-    como: loadLakeComo,
-    home: loadHome
-}
+        return {
+            ...config,
+            photoGrids
+        } as AlbumConfig;
+    };
+    return acc;
+}, {} as Record<string, () => Promise<AlbumConfig>>);

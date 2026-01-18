@@ -15,7 +15,7 @@ export const AnimateFadeIn: React.FC<{
     duration?: number
 }> = ({
     ReactDOMElement,
-    duration = 1
+    duration = 0.4
 }) => {
         return (
             <AnimatePresence>
