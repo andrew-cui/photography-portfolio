@@ -22,11 +22,13 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({
     photoData = [],
     spacer = 'm' as SpacerSize,
     navigation = false,
-    homePage = false
+    homePage = false,
+    collapsible = false
 }) => {
     const navigate = useNavigate()
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isCollapsed, setIsCollapsed] = useState(false);
 
     const openLightbox = (index: number) => {
         setCurrentIndex(index);
@@ -41,26 +43,41 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({
         setCurrentIndex((prev) => (prev - 1 + photoData.length) % photoData.length);
     };
 
+    const toggleCollapse = () => {
+        if (collapsible) {
+            setIsCollapsed(!isCollapsed);
+        }
+    };
+
     return (
         <>
             <AnimateFadeIn
-                ReactDOMElement={<div className={css.photoGrid}>
-                    <div className={css.photoGridTitle}>
+                ReactDOMElement={<div className={clsx(css.photoGrid, collapsible && css['photoGrid--collapsible'])}>
+                    <div className={clsx(css.photoGridTitle, collapsible && css['photoGridTitle--collapsible'])} onClick={toggleCollapse}>
                         <h2>{title}</h2>
-                        <h5>{subtitle}</h5>
+                        {collapsible && (
+                            <div className={clsx(css.photoGridTitle__icon, isCollapsed && css['photoGridTitle__icon--collapsed'])}>
+                                <i className="bi bi-chevron-down"></i>
+                            </div>
+                        )}
+                        {subtitle && <h5 className={css.photoGridTitle__subtitle}>{subtitle}</h5>}
                     </div>
-                    {photoData.map((photo, index) => {
-                        return (
-                            <PhotoCard
-                                key={index}
-                                photo={photo}
-                                homePage={homePage}
-                                onClick={navigation && photo.href
-                                    ? () => navigate(photo.href!)
-                                    : () => openLightbox(index)}
-                            />
-                        )
-                    })}
+                    {!isCollapsed && (
+                        <div className={css.photoGrid__content}>
+                            {photoData.map((photo, index) => {
+                                return (
+                                    <PhotoCard
+                                        key={index}
+                                        photo={photo}
+                                        homePage={homePage}
+                                        onClick={navigation && photo.href
+                                            ? () => navigate(photo.href!)
+                                            : () => openLightbox(index)}
+                                    />
+                                )
+                            })}
+                        </div>
+                    )}
                     <Spacer size={spacer} />
                 </div>
                 } />

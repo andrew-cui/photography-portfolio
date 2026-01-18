@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 
 // components, styles & data
 import { AnimateFadeIn } from '@components'
-import PhotoGallery from '@app/photos/PhotoGallery'
+import PhotoGrid from '@app/photos/PhotoGrid'
 import { photoAlbums } from '@data/photos'
 import type { AlbumConfig } from '@/types/album'
 
@@ -31,16 +31,34 @@ export default function HomePage() {
     }, [])
 
     if (loading || !config) {
-        return null // Or a loading spinner
+        return null
     }
 
+    const allPhotos = config.photoGrids[0].photoData || [];
+
+    const sections = [
+        { title: 'Places', category: 'travel' },
+        { title: 'Events', category: 'events' },
+        { title: 'People', category: 'people' }
+    ];
+
     return (
-        <AnimateFadeIn ReactDOMElement={
-            <PhotoGallery
-                {...config}
-                title={undefined}
-                homePage
-                navigation />
-        } />
+        <div className="app app--homepage">
+            {sections.map(section => {
+                const sectionPhotos = allPhotos.filter(p => p.data?.category === section.category);
+                if (sectionPhotos.length === 0) return null;
+
+                return (
+                    <PhotoGrid
+                        key={section.category}
+                        title={section.title}
+                        photoData={sectionPhotos}
+                        collapsible
+                        homePage
+                        navigation
+                    />
+                );
+            })}
+        </div>
     )
 }

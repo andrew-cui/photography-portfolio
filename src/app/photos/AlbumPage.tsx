@@ -45,10 +45,5 @@ export default function AlbumPage() {
         return <Navigate to="/" replace />
     }
 
-    return (
-        <AnimateFadeIn
-            key={albumId}
-            ReactDOMElement={<PhotoGallery {...config} />}
-        />
-    )
+    return <PhotoGallery {...config} />;
 }

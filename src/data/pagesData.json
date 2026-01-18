@@ -1,32 +1,62 @@
 [
     {
         "title": "about",
-        "link": "/about",
-        "page": true,
-        "dropdown": ""
+        "link": "/about"
     },
     {
-        "title": "banff",
-        "link": "/photos/travel/banff",
-        "page": true,
-        "dropdown": ""
+        "title": "places",
+        "link": "/places",
+        "dropdown": [
+            {
+                "title": "banff",
+                "link": "/photos/travel/banff"
+            },
+            {
+                "title": "switzerland",
+                "link": "/photos/travel/switzerland"
+            },
+            {
+                "title": "lake como",
+                "link": "/photos/travel/como"
+            },
+            {
+                "title": "greece",
+                "link": "/photos/travel/greece"
+            },
+            {
+                "title": "japan",
+                "link": "/photos/travel/japan"
+            },
+            {
+                "title": "slovenia",
+                "link": "/photos/travel/slovenia"
+            },
+            {
+                "title": "amsterdam",
+                "link": "/photos/travel/amsterdam"
+            },
+            {
+                "title": "scotland",
+                "link": "/photos/travel/scotland"
+            },
+            {
+                "title": "marrakech",
+                "link": "/photos/travel/marrakech"
+            }
+        ]
     },
     {
-        "title": "switzerland",
-        "link": "/photos/travel/switzerland",
-        "page": true,
-        "dropdown": ""
+        "title": "events",
+        "link": "/events",
+        "dropdown": []
     },
     {
-        "title": "lake como",
-        "link": "/photos/travel/como",
-        "page": true,
-        "dropdown": ""
+        "title": "people",
+        "link": "/people",
+        "dropdown": []
     },
     {
-        "title": "greece",
-        "link": "/photos/travel/greece",
-        "page": true,
-        "dropdown": ""
+        "title": "rates & booking",
+        "link": "/booking"
     }
 ]

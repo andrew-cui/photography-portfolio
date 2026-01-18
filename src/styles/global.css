@@ -14,7 +14,7 @@
   /* backgrounds & colors */
   --rgb-primary-bg: 251, 250, 249;
   --rgb-primary-color: 39, 39, 42;
-  --rgb-blue: 8, 69, 126;
+  --rgb-blue: 48, 89, 186;
   --rgb-gold: 219, 171, 4;
   --rgb-gray-light: 170, 170, 170;
   --rgb-gray-medium: 122, 122, 122;
@@ -33,7 +33,7 @@
   --color-boxshadow-hover: rgba(var(--rgb-gray-dark), 0.4);
 
   /* navigation */
-  --nav-height-header: 135;
+  --nav-height-header: 147;
   --nav-height-bar: 60px;
   --nav-blur: blur(8px);
   --nav-border: 0.5px solid rgba(var(--rgb-gray-light), 0.15);

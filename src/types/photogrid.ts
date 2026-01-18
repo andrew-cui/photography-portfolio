@@ -8,4 +8,5 @@ export type PhotoGridProps = {
     spacer?: SpacerSize;
     navigation?: boolean;
     homePage?: boolean;
+    collapsible?: boolean;
 }

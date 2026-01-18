@@ -50,6 +50,41 @@ export const albumConfigs: Record<string, ExtendedAlbumConfig> = {
         category: 'travel',
         photoGrids: [{ title: '', subtitle: '' }]
     },
+    japan: {
+        title: 'Japan',
+        subtitle: '',
+        tags: ['travel', 'asia'],
+        category: 'travel',
+        photoGrids: [{ title: '', subtitle: '' }]
+    },
+    amsterdam: {
+        title: 'Amsterdam',
+        subtitle: '',
+        tags: ['travel', 'europe'],
+        category: 'travel',
+        photoGrids: [{ title: '', subtitle: '' }]
+    },
+    slovenia: {
+        title: 'Slovenia',
+        subtitle: 'Lake Bled',
+        tags: ['travel', 'europe'],
+        category: 'travel',
+        photoGrids: [{ title: '', subtitle: '' }]
+    },
+    scotland: {
+        title: 'Scotland',
+        subtitle: 'Solo tripping in the Isle of Skye',
+        tags: ['travel', 'europe'],
+        category: 'travel',
+        photoGrids: [{ title: '', subtitle: '' }]
+    },
+    marrakech: {
+        title: 'Marrakech',
+        subtitle: '',
+        tags: ['travel', 'africa'],
+        category: 'travel',
+        photoGrids: [{ title: '', subtitle: '' }]
+    },
     home: {
         title: 'Home',
         subtitle: '',

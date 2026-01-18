@@ -31,7 +31,8 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
 }) => {
     return (
         <div className={clsx(
-            css.photoCard
+            css.photoCard,
+            homePage && css['photoCard--static']
         )}
             onClick={onClick}>
             <div className={clsx(css.photoCard__img)}>
