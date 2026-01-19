@@ -56,6 +56,12 @@
       "@photos": [
         "data/photos"
       ],
+      "@context/*": [
+        "context/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ]
     }
   },
   "include": [

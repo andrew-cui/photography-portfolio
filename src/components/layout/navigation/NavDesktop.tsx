@@ -1,21 +1,12 @@
-/* Navigation 
-* top desktop navigation bar and mobile navigation dropdown
-*/
+import React, { useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import css from '@styles/components/nav.module.css';
+import { Hyperlink } from '@components/index';
+import clsx from 'clsx';
+import { navigationData, showIcons } from '@data/navigationData';
+import { useBooking } from '@context/BookingContext';
+import { motion, AnimatePresence } from 'framer-motion';
 
-// packages 
-import React from 'react'
-import { useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import clsx from 'clsx'
-
-// components, styles & data
-import Hyperlink from '@components/ui/Hyperlink'
-import { motion, AnimatePresence } from 'framer-motion'
-import css from '@styles/components/nav.module.css'
-
-import pagesData from '@data/pagesData.json'
-
-// render
 export default function NavDesktop({
     hideTitle = false
 }: {
@@ -25,6 +16,7 @@ export default function NavDesktop({
     const location = useLocation();
     const currentPage = location.pathname;
     const [activeCategory, setActiveCategory] = useState<string | null>(null);
+    const { openModal } = useBooking();
 
     // Auto-collapse dropdown when switching to mobile view
     React.useEffect(() => {
@@ -37,16 +29,21 @@ export default function NavDesktop({
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    const activeItem = navigationData.find(p => p.title === activeCategory);
+
     return (
         <div className={css['nav__desktop']}>
-            <div className={css['nav--collapsed_title']}>
-                <Link to="/"><h1>Andrew Cui</h1></Link>
-            </div>
+            {!hideTitle && (
+                <div className={css['nav--collapsed_title']}>
+                    <Link to="/"><h1>Andrew Cui</h1></Link>
+                </div>
+            )}
             <div className={css.nav__desktop_main}>
                 <div className={css.nav__desktop_items}>
-                    {pagesData.map((item, index) => {
+                    {navigationData.map((item, index) => {
                         const hasDropdown = item.dropdown && item.dropdown.length > 0;
                         const isOpen = activeCategory === item.title;
+                        const isBookingLink = item.link === "/book";
 
                         return (
                             <div key={index} className={css.nav__desktop_item}>
@@ -56,6 +53,11 @@ export default function NavDesktop({
                                         isOpen && css['nav__desktop_link_wrapper--open']
                                     )}
                                     onClick={(e) => {
+                                        if (isBookingLink) {
+                                            e.preventDefault();
+                                            openModal();
+                                            return;
+                                        }
                                         if (hasDropdown) {
                                             e.preventDefault();
                                             setActiveCategory(isOpen ? null : item.title);
@@ -66,7 +68,12 @@ export default function NavDesktop({
                                     }}
                                 >
                                     <Hyperlink
-                                        text={item.title}
+                                        text={
+                                            <>
+                                                {showIcons && item.icon && <span className={css.nav__desktop_icon}>{item.icon}</span>}
+                                                {item.title}
+                                            </>
+                                        }
                                         href={hasDropdown ? "#" : item.link}
                                         classes={css.nav__desktop_link}
                                         active={currentPage === item.link || (hasDropdown && item.dropdown.some(d => d.link === currentPage))}
@@ -87,7 +94,7 @@ export default function NavDesktop({
 
                 {/* Secondary Navbar */}
                 <AnimatePresence>
-                    {activeCategory && pagesData.find(p => p.title === activeCategory)?.dropdown && (
+                    {activeCategory && activeItem?.dropdown && (
                         <motion.div
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: 'auto', opacity: 1 }}
@@ -95,11 +102,14 @@ export default function NavDesktop({
                             className={css.nav__secondary}
                         >
                             <div className={css.nav__secondary_items}>
-                                {pagesData.find(p => p.title === activeCategory)?.dropdown?.map((subItem, idx) => (
+                                {activeItem.dropdown.map((subItem, idx) => (
                                     <Link
                                         key={idx}
                                         to={subItem.link}
-                                        className={clsx(css.nav__secondary_link, currentPage === subItem.link && css['nav__secondary_link--active'])}
+                                        className={clsx(
+                                            css.nav__secondary_link,
+                                            currentPage === subItem.link && css['nav__secondary_link--active']
+                                        )}
                                         onClick={() => setActiveCategory(null)}
                                     >
                                         {subItem.title}

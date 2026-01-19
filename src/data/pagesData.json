@@ -4,6 +4,10 @@
         "link": "/about"
     },
     {
+        "title": "book",
+        "link": "/book"
+    },
+    {
         "title": "places",
         "link": "/places",
         "dropdown": [
@@ -51,12 +55,22 @@
         "dropdown": []
     },
     {
+        "title": "sports",
+        "link": "/sports",
+        "dropdown": [
+            {
+                "title": "nyc marathon",
+                "link": "/photos/sports/nyc_marathon"
+            },
+            {
+                "title": "mini 10k",
+                "link": "/photos/sports/mini_10k"
+            }
+        ]
+    },
+    {
         "title": "people",
         "link": "/people",
         "dropdown": []
-    },
-    {
-        "title": "rates & booking",
-        "link": "/booking"
     }
 ]

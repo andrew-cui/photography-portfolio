@@ -1,5 +1,6 @@
 // ui components import
 export { default as EmailForm } from './ui/EmailForm'
+export { default as BookingForm } from './ui/BookingForm'
 export { default as Hyperlink } from './ui/Hyperlink'
 export { default as IconButton } from './ui/IconButton'
 
@@ -9,4 +10,4 @@ export { default as Navigation } from './layout/navigation/Navigation'
 export { default as Spacer, type SpacerSize } from './layout/Spacer'
 
 // animations
-export { AnimateFadeIn } from './layout/animations/AnimateFadeIn'
+export * from './layout/animations'

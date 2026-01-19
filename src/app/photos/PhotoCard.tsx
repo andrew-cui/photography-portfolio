@@ -29,6 +29,7 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
     homePage = false,
     onClick
 }) => {
+    console.log(photo)
     return (
         <div className={clsx(
             css.photoCard,
@@ -66,12 +67,3 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
 }
 
 export default PhotoCard
-// src,
-//     href = undefined,
-//     title = '',
-//     data = {},
-//     exif = {},
-//     aspect = 'v',
-//     external = false,
-//     order,
-//     variant

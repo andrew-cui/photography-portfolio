@@ -24,7 +24,7 @@ type PhotoGalleryProps = {
     date?: string;
     navigation?: boolean;           // true = this is used for navigation; false = this is used just for display
     homePage?: boolean;             // add extra spacing for home page
-    category?: 'travel' | 'portraits' | 'events' | 'running' | 'other' | undefined;
+    category?: 'travel' | 'portraits' | 'events' | 'running' | 'events/running' | 'other' | undefined;
     tags?: string[];
 }
 
@@ -47,18 +47,21 @@ export default function PhotoGallery({
     return (
         <div className={clsx('app',
             homePage ? 'app--homepage' : '', css.photoGallery)}>
-            <h1>{title}</h1>
-            <h3>{subtitle}</h3>
-            <h4>{date}</h4>
-            {tags.filter(t => !!t).length > 0 && <div className={css.photoGallery_tags}>
-                {tags.filter(t => !!t).map((tag, index) => {
-                    return (
-                        <IconButton
-                            key={index}
-                            label={tag} />
-                    )
-                })}
-            </div>}
+            <div className={clsx(
+                css['photoGallery__header'])}>
+                <h1>{title}</h1>
+                <h3>{subtitle}</h3>
+                <h4>{date}</h4>
+                {tags.filter(t => !!t).length > 0 && <div className={css.photoGallery_tags}>
+                    {tags.filter(t => !!t).map((tag, index) => {
+                        return (
+                            <IconButton
+                                key={index}
+                                label={tag} />
+                        )
+                    })}
+                </div>}
+            </div>
             {!homePage && <Spacer size='m' />}
             {hasMultipleGrids ? (
                 (photoGrids as PhotoGridProps[]).map((item, index) => (
@@ -68,13 +71,13 @@ export default function PhotoGallery({
                         subtitle={item.subtitle}
                         photoData={item.photoData}
                         homePage={homePage}
-                        navigation />
+                        navigation={navigation} />
                 ))
             ) : (
                 <PhotoGrid
                     photoData={photoGrids as PhotoProps[]}
                     homePage={homePage}
-                    navigation />
+                    navigation={navigation} />
             )}
         </div>
     )

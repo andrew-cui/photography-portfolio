@@ -38,13 +38,13 @@ function processRows(rows: any[], albumName: string, categoryName?: string): Pho
     const photos: PhotoProps[] = rows
         .filter((row: any) => {
             // Check for homepage flag in any common column variation
-            const homepageVal = (row.homepage || row.isHomepage || row.is_homepage || row['is homepage'])?.toString().trim().toUpperCase();
+            const homepageVal = (row.homepage)?.toString().trim().toUpperCase();
             const isHome = homepageVal === 'TRUE' || homepageVal === '1' || homepageVal === 'YES';
 
             if (albumName === 'home') return isHome;
 
             // Normal album filtering - check galleryName or srcFolder
-            const gallery = row.galleryName || row.album || row.gallery || row.srcFolder;
+            const gallery = row.srcFolder?.toString().trim();
             return gallery?.toLowerCase() === albumName.toLowerCase();
         })
         .map((row: any, index: number) => {
@@ -59,7 +59,7 @@ function processRows(rows: any[], albumName: string, categoryName?: string): Pho
                 : `photos/${srcCategory}/${srcFolder}`;
 
             // Use specialized homepage columns if we are on the home page
-            const orderValue = isHome && row.homepageOrder ? row.homepageOrder : row.order;
+            const orderValue = isHome ? row.homepageOrder : row.order;
             const dateValue = isHome && row.homepageDate ? row.homepageDate : row.dateTaken;
 
             return {

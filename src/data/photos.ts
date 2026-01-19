@@ -17,8 +17,15 @@ export const photoAlbums: Record<string, () => Promise<AlbumConfig>> = Object.ke
 
             // Apply declarative tag filtering if matchTags is provided
             if (grid.matchTags && grid.matchTags.length > 0) {
-                photoData = allPhotos.filter(p =>
+                photoData = photoData.filter(p =>
                     p.data?.tags?.some(tag => grid.matchTags?.includes(tag))
+                );
+            }
+
+            // Apply exclusion filtering
+            if (grid.excludeTags && grid.excludeTags.length > 0) {
+                photoData = photoData.filter(p =>
+                    !p.data?.tags?.some(tag => grid.excludeTags?.includes(tag))
                 );
             }
 

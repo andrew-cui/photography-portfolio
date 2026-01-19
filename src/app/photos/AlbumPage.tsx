@@ -7,7 +7,11 @@ import { AnimateFadeIn } from '@components/layout/animations/AnimateFadeIn'
 import type { AlbumConfig } from '@/types/album'
 
 export default function AlbumPage() {
-    const { category, albumId } = useParams()
+    const params = useParams();
+    const splat = params['*'] || '';
+    const segments = splat.split('/').filter(Boolean);
+    const albumId = segments[segments.length - 1];
+    const category = segments[0];
     const [config, setConfig] = useState<AlbumConfig | null>(null)
     const [loading, setLoading] = useState(true)
 

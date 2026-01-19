@@ -7,16 +7,33 @@
 
 .photoGridTitle {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 20px;
+}
+
+.photoGridTitle__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 1;
+}
+
+.photoGridTitle h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0;
+    text-transform: lowercase;
+}
+
+.photoGridTitle__subtitle_container {
+    display: flex;
     align-items: center;
     gap: 8px;
-    width: 100%;
-    margin-bottom: 20px;
 
-    h2 {
-        font-size: 1.5rem;
-        font-weight: 500;
-        margin: 0;
+    h5 {
         text-transform: lowercase;
     }
 }
@@ -30,14 +47,16 @@
 
 .photoGridTitle__icon {
     font-size: 10px;
-    transition: transform 0.3s ease, color 0.2s ease;
-    color: rgb(var(--rgb-gray-semidark));
+    transition: transform 0.3s ease, color 0.4s ease;
+    color: rgb(var(--rgb-gray-dark));
     cursor: pointer;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-.photoGridTitle__icon--collapsed {
-    transform: rotate(-90deg);
+.photoGridTitle__icon--open {
+    transform: rotate(180deg);
 }
 
 @media (max-width: 576px) {}

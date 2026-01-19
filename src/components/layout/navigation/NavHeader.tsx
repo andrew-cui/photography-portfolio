@@ -10,7 +10,7 @@ import clsx from 'clsx'
 import css from '@styles/components/nav.module.css'
 
 // render
-export default function NavHeader () {
+export default function NavHeader() {
     return (
         <div className={clsx(
             css.nav__header

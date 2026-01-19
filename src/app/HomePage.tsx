@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react'
 import { AnimateFadeIn } from '@components'
 import PhotoGrid from '@app/photos/PhotoGrid'
 import { photoAlbums } from '@data/photos'
+import { navigationData } from '@data/navigationData'
 import type { AlbumConfig } from '@/types/album'
 
 // render
@@ -42,16 +43,22 @@ export default function HomePage() {
         { title: 'People', category: 'people' }
     ];
 
+    const getSectionIcon = (title: string) => {
+        const item = navigationData.find(n => n.title.toLowerCase() === title.toLowerCase());
+        return item?.icon;
+    };
+
     return (
         <div className="app app--homepage">
             {sections.map(section => {
-                const sectionPhotos = allPhotos.filter(p => p.data?.category === section.category);
+                const sectionPhotos = allPhotos.filter(p => p.data?.category?.startsWith(section.category));
                 if (sectionPhotos.length === 0) return null;
 
                 return (
                     <PhotoGrid
                         key={section.category}
                         title={section.title}
+                        icon={getSectionIcon(section.title)}
                         photoData={sectionPhotos}
                         collapsible
                         homePage

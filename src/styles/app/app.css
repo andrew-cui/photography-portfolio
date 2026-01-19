@@ -7,8 +7,10 @@
   margin-bottom: var(--app-mb);
 }
 
-.app.app--homepage {
-  --app-mt: 60px;
+.app.app--text {
+  position: absolute;
+  top: calc((var(--nav-height-header) + 12) * 1px);
+  padding-bottom: var(--app-mt);
 }
 
 @media (max-width: 1200px) {

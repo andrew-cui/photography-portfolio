@@ -4,6 +4,7 @@ import HomePage from '@app/HomePage'
 import { Navigation, Footer } from '@components'
 import { AnimatePresence, motion } from 'framer-motion'
 import AlbumPage from '@app/photos/AlbumPage'
+import AboutPage from '@app/AboutPage'
 
 function TopOfPage(): null {
   const location = useLocation();
@@ -13,30 +14,37 @@ function TopOfPage(): null {
   return null;
 }
 
+import { BookingProvider } from '@context/BookingContext'
+import BookingModal from '@components/ui/BookingModal'
+
 function App() {
   const location = useLocation();
 
   return (
-    <div>
-      <TopOfPage />
-      <Navigation />
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={location.pathname}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.4 }}
-        >
-          <Routes location={location}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/photos/:category/:albumId" element={<AlbumPage />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </motion.div>
-      </AnimatePresence>
-      <Footer />
-    </div>
+    <BookingProvider>
+      <div>
+        <TopOfPage />
+        <Navigation />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={location.pathname}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <Routes location={location}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/photos/*" element={<AlbumPage />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </motion.div>
+        </AnimatePresence>
+        <Footer />
+        <BookingModal />
+      </div>
+    </BookingProvider>
   )
 }
 

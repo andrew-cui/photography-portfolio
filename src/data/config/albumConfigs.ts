@@ -7,6 +7,8 @@ export interface ExtendedAlbumConfig extends Omit<AlbumConfig, 'photoGrids'> {
         /** Optional: Only show photos that include at least one of these tags. 
          * If omitted, shows all photos in the album. */
         matchTags?: string[];
+        /** Optional: Hide photos that include at least one of these tags. */
+        excludeTags?: string[];
     }>;
 }
 
@@ -85,6 +87,38 @@ export const albumConfigs: Record<string, ExtendedAlbumConfig> = {
         category: 'travel',
         photoGrids: [{ title: '', subtitle: '' }]
     },
+
+
+    nyc_marathon: {
+        title: 'NYC Marathon',
+        subtitle: '',
+        tags: ['events', 'sports', 'running'],
+        category: 'events/running',
+        photoGrids: [
+            {
+                title: 'Autumn foliage in Banff',
+                subtitle: 'September 2023',
+                matchTags: ['elite']
+            },
+            {
+                title: 'Winter and the northern lights',
+                subtitle: 'Ski trip in March 2025',
+                excludeTags: ['elite']
+            }
+        ]
+    },
+    mini_10k: {
+        title: 'NYRR Mini 10K',
+        subtitle: '',
+        tags: ['events', 'sports', 'running'],
+        category: 'events/running',
+        photoGrids: [{ title: '', subtitle: '' }]
+    },
+
+
+
+
+
     home: {
         title: 'Home',
         subtitle: '',

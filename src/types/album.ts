@@ -7,6 +7,6 @@ export type AlbumConfig = {
     subtitle?: string;
     date?: string;
     tags?: string[];
-    category?: 'travel' | 'portraits' | 'events' | 'running' | 'other';
+    category?: 'travel' | 'portraits' | 'events' | 'sports' | 'events/running' | 'other';
     photoGrids: PhotoGridProps[] | PhotoProps[];
 }
