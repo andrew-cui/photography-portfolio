@@ -269,11 +269,11 @@ export default function AboutPage() {
 
                     </section>
 
-                    <footer className={css.about__footer}>
+                    {/* <div className={css.about__footer}>
                         <a href="mailto:hello@andrewcui.com" className={css.about__contact}>
                             <i className="bi bi-envelope" /> hello@andrewcui.com
                         </a>
-                    </footer>
+                    </div> */}
                 </ div>
             </div>
         } />

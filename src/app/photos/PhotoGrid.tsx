@@ -53,7 +53,7 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({
     return (
         <>
             <AnimateFadeIn
-                ReactDOMElement={<div className={clsx(css.photoGrid, collapsible && css['photoGrid--collapsible'])}>
+                ReactDOMElement={<section className={clsx(css.photoGrid, collapsible && css['photoGrid--collapsible'])}>
                     <div className={clsx(css.photoGridTitle, collapsible && css['photoGridTitle--collapsible'])} onClick={toggleCollapse}>
                         <div className={css.photoGridTitle__header}>
                             {icon && <div style={{ opacity: 0.5, display: 'flex', alignItems: 'center', height: '100%' }}>{icon}</div>}
@@ -92,7 +92,7 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({
                         )}
                     </AnimatePresence>
                     <Spacer size={spacer} />
-                </div>
+                </section>
                 } />
             <Lightbox
                 isOpen={lightboxOpen}

@@ -13,3 +13,17 @@ export const configHome: AlbumConfig = {
         }
     ]
 }
+
+export const configRunning: AlbumConfig = {
+    title: 'Running',
+    subtitle: '',
+    tags: [''],
+    category: 'events',
+    photoGrids: [
+        {
+            photoData: [],
+            title: '',
+            subtitle: ''
+        }
+    ]
+}

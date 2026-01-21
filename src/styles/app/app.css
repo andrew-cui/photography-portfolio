@@ -1,7 +1,7 @@
 /* app-container – size of entire web app and responsive design */
 .app {
   --app-mt: 90px;
-  --app-mb: 120px;
+  --app-mb: 150px;
   --app-mx: 8%;
   margin: var(--app-mt) var(--app-mx);
   margin-bottom: var(--app-mb);

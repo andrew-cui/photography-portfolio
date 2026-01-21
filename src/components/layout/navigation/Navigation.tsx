@@ -54,7 +54,7 @@ export default function Navigation({
 
     return (
         <AnimatePresence mode="wait">
-            <motion.div
+            <nav><motion.div
                 key={showLargeHeader ? "header-page" : "simple-page"}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -67,7 +67,8 @@ export default function Navigation({
                 {showLargeHeader && !hideTitle && !isOpenMobile && <NavHeader dots={dots} />}
                 <NavDesktop />
                 <NavMobile onOpenChange={setIsOpenMobile} isCollapsed={hideTitle} />
-            </motion.div>
+            </motion.div></nav>
         </AnimatePresence>
+
     )
 }

@@ -49,5 +49,5 @@ export default function AlbumPage() {
         return <Navigate to="/" replace />
     }
 
-    return <PhotoGallery {...config} />;
+    return <PhotoGallery {...config} navigation={(config as any).isNavigation} homePage={(config as any).isNavigation} spacer={(config as any).isNavigation ? 's' : 'm'} />;
 }

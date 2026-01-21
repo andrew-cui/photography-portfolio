@@ -10,6 +10,8 @@ export interface ExtendedAlbumConfig extends Omit<AlbumConfig, 'photoGrids'> {
         /** Optional: Hide photos that include at least one of these tags. */
         excludeTags?: string[];
     }>;
+    /** If true, this album acts as a navigation page (PhotoGrid items are links). */
+    isNavigation?: boolean;
 }
 
 export const albumConfigs: Record<string, ExtendedAlbumConfig> = {
@@ -118,7 +120,14 @@ export const albumConfigs: Record<string, ExtendedAlbumConfig> = {
 
 
 
-
+    running: {
+        title: 'Running',
+        subtitle: 'Some of the many races covered in NYC',
+        tags: ['events', 'sports', 'running'],
+        category: 'events',
+        isNavigation: true,
+        photoGrids: [{ title: '', subtitle: '' }]
+    },
     home: {
         title: 'Home',
         subtitle: '',

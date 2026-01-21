@@ -14,10 +14,11 @@ let cachedRows: any[] | null = null;
  */
 export async function loadPhotosFromCSV(
     albumName: string,
-    categoryName?: string
+    categoryName?: string,
+    isNavigation: boolean = false
 ): Promise<PhotoProps[]> {
     if (cachedRows) {
-        return processRows(cachedRows, albumName, categoryName);
+        return processRows(cachedRows, albumName, categoryName, isNavigation);
     }
 
     return new Promise((resolve, reject) => {
@@ -27,50 +28,109 @@ export async function loadPhotosFromCSV(
             skipEmptyLines: true,
             complete: (results) => {
                 cachedRows = results.data as any[];
-                resolve(processRows(cachedRows, albumName, categoryName));
+                resolve(processRows(cachedRows, albumName, categoryName, isNavigation));
             },
             error: (error) => reject(error)
         });
     });
 }
 
-function processRows(rows: any[], albumName: string, categoryName?: string): PhotoProps[] {
+function processRows(rows: any[], albumName: string, categoryName?: string, isNavigation: boolean = false): PhotoProps[] {
+    const targetCategory = categoryName?.toString().trim().toLowerCase();
+
     const photos: PhotoProps[] = rows
         .filter((row: any) => {
-            // Check for homepage flag in any common column variation
+            // isNavigation:
+            // 1. Homepage
+
+            // 2. Category page - filter only for photos that match /category/subcategory or /catgory
+
+
+            // Process folder data
+            // 1. Identify the appropriate file name
+
+            // 2. Identify the metadata 
+
+            // 3. Output the metadata
+
+
+
+
+
+            // Homepage check
             const homepageVal = (row.homepage)?.toString().trim().toUpperCase();
-            const isHome = homepageVal === 'TRUE' || homepageVal === '1' || homepageVal === 'YES';
+            if (albumName === 'home') return homepageVal === 'TRUE' || homepageVal === '1' || homepageVal === 'YES';
 
-            if (albumName === 'home') return isHome;
+            // Construct row category scope
+            let rowCategory = row.category?.toString().trim().toLowerCase() || '';
+            if (row.subcategory) {
+                const sub = row.subcategory.toString().trim().toLowerCase();
+                if (sub) rowCategory += `/${sub}`;
+            }
 
-            // Normal album filtering - check galleryName or srcFolder
-            const gallery = row.srcFolder?.toString().trim();
-            return gallery?.toLowerCase() === albumName.toLowerCase();
+            // Navigation Page Logic
+            if (isNavigation) {
+                // 1. Filter: Must be marked as a category page item
+                const catPage = (row.categoryPage)?.toString().trim().toUpperCase();
+                const isCatPage = catPage === 'TRUE' || catPage === '1' || catPage === 'YES';
+                if (!isCatPage) return false;
+
+                // 2. Filter: Must belong to the requested category scope
+                // Matches if row category is "events" or "events/running" when target is "events"
+                return rowCategory && targetCategory &&
+                    (rowCategory === targetCategory || rowCategory.startsWith(targetCategory + '/'));
+            }
+
+            // Standard Album Logic
+            // Strict folder match currently preferred for standard albums
+            const gallery = row.srcFolder?.toString().trim().toLowerCase();
+            return gallery === albumName.toLowerCase();
         })
         .map((row: any, index: number) => {
             const isHome = albumName === 'home';
-            const srcCategory = row.category || categoryName || 'other';
+
+            // Re-construct category for src generation to match the filter logic
+            // (Should ideally be a shared helper but inline is fine here for now)
+            let rowCat = row.category;
+            if (row.subcategory) {
+                rowCat = `${rowCat}/${row.subcategory}`;
+            }
+
+            const srcCategory = rowCat || categoryName || 'other';
             const srcFolder = row.srcFolder || albumName;
             const srcName = row.srcName;
 
-            // Asset lives at: photos/category/srcFolder/srcName
+            // Asset Path
             const assetPath = PHOTO_DATA_SOURCE === 'r2'
                 ? `${srcCategory}/${srcFolder}`
                 : `photos/${srcCategory}/${srcFolder}`;
 
-            // Use specialized homepage columns if we are on the home page
-            const orderValue = isHome ? row.homepageOrder : row.order;
-            const dateValue = isHome && row.homepageDate ? row.homepageDate : row.dateTaken;
+            // Determine display values
+            let orderValue = row.order;
+            let dateValue = row.dateTaken;
+            let hrefValue = `/photos/${srcCategory}/${srcFolder}`;
+            let titleValue = row.title;
+
+            if (isHome) {
+                orderValue = row.homepageOrder;
+                dateValue = row.homepageDate;
+                hrefValue = row.homepageLink ? `/photos/${row.homepageLink}` : hrefValue;
+                titleValue = row.homepageTitle || row.galleryName;
+            } else if (isNavigation) {
+                // Navigation pages use nav overrides if available, else standard
+                titleValue = row.navTitle || row.galleryName || row.title;
+                if (row.navOrder) orderValue = row.navOrder;
+            }
 
             return {
                 src: getPhotoUrl(assetPath, srcName),
-                title: isHome ? row.galleryName : row.title,
-                href: `/photos/${srcCategory}/${srcFolder}`,
+                title: titleValue,
+                href: hrefValue,
                 galleryName: row.galleryName,
                 aspect: row.aspect as "v" | "h",
                 order: orderValue ? parseInt(orderValue) : index,
                 data: {
-                    category: srcCategory,
+                    category: row.category?.split('/')[0] || srcCategory?.split('/')[0] || 'other',
                     location: row.location,
                     dateTaken: dateValue ? dateValue.toString() : null,
                     tags: row.tags ? row.tags.split(',').map((t: string) => t.trim()) : [],

@@ -45,9 +45,8 @@ export default function PhotoGallery({
     const hasMultipleGrids = photoGrids.length > 0 && isPhotoGrid(photoGrids[0])
 
     return (
-        <div className={clsx('app',
-            homePage ? 'app--homepage' : '', css.photoGallery)}>
-            <div className={clsx(
+        <div className={clsx('app', css.photoGallery)}>
+            <header className={clsx(
                 css['photoGallery__header'])}>
                 <h1>{title}</h1>
                 <h3>{subtitle}</h3>
@@ -61,7 +60,7 @@ export default function PhotoGallery({
                         )
                     })}
                 </div>}
-            </div>
+            </header>
             {!homePage && <Spacer size='m' />}
             {hasMultipleGrids ? (
                 (photoGrids as PhotoGridProps[]).map((item, index) => (

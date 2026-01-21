@@ -9,7 +9,7 @@ import { albumConfigs } from './config/albumConfigs'
 export const photoAlbums: Record<string, () => Promise<AlbumConfig>> = Object.keys(albumConfigs).reduce((acc, albumName) => {
     acc[albumName] = async (): Promise<AlbumConfig> => {
         const config = albumConfigs[albumName];
-        const allPhotos = await loadPhotosFromCSV(albumName, config.category);
+        const allPhotos = await loadPhotosFromCSV(albumName, config.category, config.isNavigation);
 
         // Map the grid configurations to actual photo data
         const photoGrids = config.photoGrids.map(grid => {
