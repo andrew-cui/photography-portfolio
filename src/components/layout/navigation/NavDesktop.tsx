@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import css from '@styles/components/nav.module.css';
 import { Hyperlink } from '@components/index';
 import clsx from 'clsx';
-import { navigationData, showIcons } from '@data/navigationData';
+import { navigationData, showIcons } from '@data/site/navigationData';
 import { useBooking } from '@context/BookingContext';
 import { motion, AnimatePresence } from 'framer-motion';
 

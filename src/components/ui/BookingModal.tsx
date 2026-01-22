@@ -1,7 +1,7 @@
 import { useBooking } from '@context/BookingContext';
 import css from '@styles/components/booking-modal.module.css';
 import clsx from 'clsx';
-import { bookingPackages } from '@data/bookingData';
+import { bookingPackages } from '@data/site/bookingData';
 import { BookingForm, AnimateModal, Spacer } from '@components/index';
 
 export default function BookingModal() {

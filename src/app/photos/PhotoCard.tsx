@@ -29,7 +29,6 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
     homePage = false,
     onClick
 }) => {
-    console.log(photo)
     return (
         <div className={clsx(
             css.photoCard,

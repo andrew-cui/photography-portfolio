@@ -6,10 +6,11 @@
 import { useState, useEffect } from 'react'
 
 // components, styles & data
+// components, styles & data
 import { AnimateFadeIn } from '@components'
 import PhotoGrid from '@app/photos/PhotoGrid'
-import { photoAlbums } from '@data/photos'
-import { navigationData } from '@data/navigationData'
+import { albumRegistry } from '@data/photos/albumRegistry'
+import { navigationData } from '@data/site/navigationData'
 import type { AlbumConfig } from '@/types/album'
 
 // render
@@ -20,7 +21,7 @@ export default function HomePage() {
     useEffect(() => {
         async function loadHome() {
             try {
-                const homeConfig = await photoAlbums.home()
+                const homeConfig = await albumRegistry.home()
                 setConfig(homeConfig)
             } catch (error) {
                 console.error('Failed to load home photos:', error)

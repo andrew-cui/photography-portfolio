@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AnimateFadeIn } from '@components/layout/animations/AnimateFadeIn';
 import css from '@styles/components/nav.module.css';
-import { navigationData, showIcons } from '@data/navigationData';
+import { navigationData, showIcons } from '@data/site/navigationData';
 import { useBooking } from '@context/BookingContext';
 
 export default function NavMobile({

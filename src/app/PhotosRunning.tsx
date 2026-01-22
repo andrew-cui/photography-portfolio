@@ -2,7 +2,7 @@ import PhotoGrid from '@app/photos/PhotoGrid'
 import clsx from 'clsx'
 import css from '@styles/app/photos/photogallery.module.css'
 import { useState, useEffect } from 'react';
-import { photoAlbums } from '@data/photos';
+import { photoAlbums } from '@data/photos/albumRegistry';
 import type { AlbumConfig } from '@/types/album';
 import { AnimateFadeIn, Spacer } from '@components';
 

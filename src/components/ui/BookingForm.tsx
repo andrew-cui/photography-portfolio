@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useBooking } from '@context/BookingContext';
-import { targetEmail } from '@data/bookingData';
+import { targetEmail } from '@data/site/bookingData';
 import css from '@styles/components/booking-modal.module.css';
 
 interface BookingFormProps {

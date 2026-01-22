@@ -7,7 +7,7 @@ import clsx from 'clsx'
 
 // components, styles & data
 import css from '@styles/components/footer.module.css'
-import socials from '@data/socialsData'
+import socials from '@data/site/socialsData'
 
 // render
 export default function Footer() {

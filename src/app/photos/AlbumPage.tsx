@@ -2,8 +2,7 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import PhotoGallery from '@app/photos/PhotoGallery'
-import { photoAlbums } from '@data/photos'
-import { AnimateFadeIn } from '@components/layout/animations/AnimateFadeIn'
+import { albumRegistry } from '@data/photos/albumRegistry'
 import type { AlbumConfig } from '@/types/album'
 
 export default function AlbumPage() {
@@ -17,13 +16,13 @@ export default function AlbumPage() {
 
     useEffect(() => {
         async function loadAlbum() {
-            if (!albumId || !photoAlbums[albumId]) {
+            if (!albumId || !albumRegistry[albumId]) {
                 setLoading(false)
                 return
             }
 
             try {
-                const albumConfig = await photoAlbums[albumId]()
+                const albumConfig = await albumRegistry[albumId]()
                 setConfig(albumConfig)
             } catch (error) {
                 console.error('Failed to load album:', error)
@@ -36,7 +35,7 @@ export default function AlbumPage() {
     }, [albumId])
 
     // Safety checks
-    if (!albumId || !photoAlbums[albumId]) {
+    if (!albumId || !albumRegistry[albumId]) {
         console.log(albumId)
         return <Navigate to="/" replace />
     }

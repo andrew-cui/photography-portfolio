@@ -28,6 +28,19 @@ photography-portfolio/
 └── config/              # Build and deployment configs
 ```
 
+## Data Architecture (`src/data/photos/`)
+
+The application uses a CSV-driven approach to manage photo metadata, decoupled from the component logic.
+
+- **`albumConfig.ts`**:
+  Defines the static configuration for every album in the portfolio. This includes the album's title, subtitle, source path (`src_path`), tags, and layout configuration (how many grids to show, inclusive/exclusive tag filtering). It acts as the single source of truth for *what* albums exist.
+
+- **`photoLoader.ts`**:
+  Handles the raw data fetching and parsing. It connects to the Google Sheets CSV (or local fallback), parses the rows, and applies low-level filtering based on the folder path (`src_path`) and navigation context. It transforms raw CSV rows into typed `PhotoProps` objects.
+
+- **`albumRegistry.ts`**:
+  The bridge between configuration and data loading. It iterates over the definitions in `albumConfig.ts` and creates a registry of async loader functions. When a component requests an album (e.g., `albumRegistry.banff()`), this registry triggers the `photoLoader` with the specific parameters defined in the config, ensuring that components only need to know the album ID.
+
 ## Version History
 
 ### v1.0 (2017-2019)

@@ -16,10 +16,10 @@ export interface ExtendedAlbumConfig extends Omit<AlbumConfig, 'photoGrids'> {
 
 export const albumConfigs: Record<string, ExtendedAlbumConfig> = {
     banff: {
+        src_path: 'travel',
         title: 'Banff',
         subtitle: 'Banff National park throughout the seasons',
         tags: ['travel', 'winter'],
-        category: 'travel',
         photoGrids: [
             {
                 title: 'Autumn foliage in Banff',
@@ -28,92 +28,92 @@ export const albumConfigs: Record<string, ExtendedAlbumConfig> = {
             },
             {
                 title: 'Winter and the northern lights',
-                subtitle: 'Ski trip in March 2025',
+                subtitle: 'Ski trip, March 2025',
                 matchTags: ['winter', 'northern lights']
             }
         ]
     },
     switzerland: {
+        src_path: 'travel',
         title: 'Switzerland',
         subtitle: 'Grand tour of Switzerland with the family',
         tags: ['travel', 'europe'],
-        category: 'travel',
         photoGrids: [{ title: '', subtitle: '' }]
     },
     como: {
+        src_path: 'travel',
         title: 'Lake Como',
         subtitle: '1 week in Lake Como, Summer 2024',
         tags: ['travel', 'europe'],
-        category: 'travel',
         photoGrids: [{ title: '', subtitle: '' }]
     },
     greece: {
         title: 'Greece',
         subtitle: 'Santorini, Athens, and Meteora',
         tags: ['travel', 'europe'],
-        category: 'travel',
+        src_path: 'travel',
         photoGrids: [{ title: '', subtitle: '' }]
     },
     japan: {
+        src_path: 'travel',
         title: 'Japan',
         subtitle: '',
         tags: ['travel', 'asia'],
-        category: 'travel',
         photoGrids: [{ title: '', subtitle: '' }]
     },
     amsterdam: {
+        src_path: 'travel',
         title: 'Amsterdam',
         subtitle: '',
         tags: ['travel', 'europe'],
-        category: 'travel',
         photoGrids: [{ title: '', subtitle: '' }]
     },
     slovenia: {
+        src_path: 'travel',
         title: 'Slovenia',
         subtitle: 'Lake Bled',
         tags: ['travel', 'europe'],
-        category: 'travel',
         photoGrids: [{ title: '', subtitle: '' }]
     },
     scotland: {
+        src_path: 'travel',
         title: 'Scotland',
         subtitle: 'Solo tripping in the Isle of Skye',
         tags: ['travel', 'europe'],
-        category: 'travel',
         photoGrids: [{ title: '', subtitle: '' }]
     },
     marrakech: {
+        src_path: 'travel',
         title: 'Marrakech',
         subtitle: '',
         tags: ['travel', 'africa'],
-        category: 'travel',
         photoGrids: [{ title: '', subtitle: '' }]
     },
 
 
     nyc_marathon: {
+        src_path: 'events/running',
         title: 'NYC Marathon',
         subtitle: '',
         tags: ['events', 'sports', 'running'],
-        category: 'events/running',
         photoGrids: [
             {
-                title: 'Autumn foliage in Banff',
-                subtitle: 'September 2023',
+                title: 'Elite men\'s and women\'s fields',
+                subtitle: 'November 2025',
                 matchTags: ['elite']
             },
             {
-                title: 'Winter and the northern lights',
-                subtitle: 'Ski trip in March 2025',
+                title: 'Dashing Whippets NYC',
+                subtitle: '',
                 excludeTags: ['elite']
             }
         ]
     },
     mini_10k: {
+        src_path: 'events/running',
         title: 'NYRR Mini 10K',
         subtitle: '',
         tags: ['events', 'sports', 'running'],
-        category: 'events/running',
         photoGrids: [{ title: '', subtitle: '' }]
     },
 
@@ -121,18 +121,20 @@ export const albumConfigs: Record<string, ExtendedAlbumConfig> = {
 
 
     running: {
+        src_path: 'events',
         title: 'Running',
         subtitle: 'Some of the many races covered in NYC',
         tags: ['events', 'sports', 'running'],
-        category: 'events',
         isNavigation: true,
         photoGrids: [{ title: '', subtitle: '' }]
     },
+
     home: {
+        src_path: '',
         title: 'Home',
         subtitle: '',
         tags: [],
-        category: 'other',
+        isNavigation: true,
         photoGrids: [{ title: '', subtitle: '' }]
     }
 }
